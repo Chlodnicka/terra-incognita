@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('news/{id}', 'NewsController@show')->name('news.show');
+Route::get('news/index', 'NewsController@index')->name('news.index');
