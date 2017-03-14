@@ -32,6 +32,7 @@ class NewsController extends BaseController
     public function create()
     {
         $news = new News();
+
         return redirect('/news');
     }
 
