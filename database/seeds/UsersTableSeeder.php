@@ -1,0 +1,23 @@
+<?php
+
+use Illuminate\Database\Seeder;
+use App\User as User;
+
+class UsersTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        User::truncate();
+
+        User::create( [
+            'email' => 'maja.chlodnicka@gmail.com' ,
+            'password' => Hash::make( 'admin123' ) ,
+            'name' => 'admin' ,
+        ] );
+    }
+}

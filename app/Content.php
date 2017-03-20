@@ -17,4 +17,9 @@ class Content extends Model
         return $this->belongsToMany('App\Multimedia');
     }
 
+    public static function getByType($type)
+    {
+        return Content::where('type', $type)->get();
+    }
+
 }

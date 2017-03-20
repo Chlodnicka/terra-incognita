@@ -1,4 +1,5 @@
- - ../../../resources/assets/js/pluginsexpedition.js
- - ../../../resources/assets/js/jquery.particleground.js
- - ../../../resources/assets/js/expedition.js
- - ../../../resources/assets/js/app.js
+ - ../../resources/assets/js/pluginsexpedition.js
+ - ../../resources/assets/js/jquery.particleground.js
+ - ../../resources/assets/js/expedition.js
+ - ../../resources/assets/js/expedition-video.js
+ - ../../resources/assets/js/app.js
