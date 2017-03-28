@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class News extends Model
 {
     protected $table = 'news';
-
+    protected $fillable = ['title', 'lead', 'ico', 'text', 'date'];
     /**
      * Get the comments for the news.
      */

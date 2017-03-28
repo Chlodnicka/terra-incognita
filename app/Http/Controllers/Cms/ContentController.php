@@ -15,19 +15,19 @@ class ContentController extends BaseController
     public function we()
     {
         $content = Content::getByType('ABOUT');
-        return view('content.we', ['content' => $content]);
+        return view('cms.content.we', ['content' => $content]);
     }
 
     public function support()
     {
         $content = Content::getByType('SUPPORT');
-        return view('content.support', ['content' => $content]);
+        return view('cms.content.support', ['content' => $content]);
     }
 
     public function contact()
     {
         $content = Content::getByType('CONTACT');
-        return view('content.contact');
+        return view('cms.content.contact');
     }
 
 

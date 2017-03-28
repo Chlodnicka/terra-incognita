@@ -19,7 +19,7 @@ class Content extends Model
 
     public static function getByType($type)
     {
-        return Content::where('type', $type)->get();
+        return Content::where('type', $type)->first();
     }
 
 }

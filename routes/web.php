@@ -39,22 +39,29 @@ Route::group(['domain' => 'terraincognita.local'], function () {
 
 Route::group(['domain' => 'cms.terraincognita.local'], function () {
     Auth::routes();
+
     Route::get('/', 'CmsController@index')->name('dashboard');
 
     Route::get('/news', 'Cms\NewsController@index')->name('news');
-    Route::get('/news/{id}', 'Cms\NewsController@edit')->name('news.edit');
-    Route::post('/news/{id}', 'Cms\NewsController@edit')->name('news.update');
     Route::get('/news/add', 'Cms\NewsController@add')->name('news.add');
-    Route::post('/news/add', 'Cms\NewsController@add')->name('news.create');
-    Route::post('/news/delete/{id}', 'Cms\NewsController@delete')->name('news.delete');
+    Route::post('/news/add', 'Cms\NewsController@create')->name('news.create');
+    Route::get('/news/delete/{id}', 'Cms\NewsController@destroy')->name('news.destroy');
+    Route::get('/news/{id}', 'Cms\NewsController@edit')->name('news.edit');
+    Route::post('/news/{id}', 'Cms\NewsController@update')->name('news.update');
 
     Route::get('/partners', 'Cms\PartnersController@index')->name('partners');
-    Route::get('/partners/{id}', 'Cms\PartnersController@edit')->name('partners.edit');
     Route::get('/partners/add', 'Cms\PartnersController@add')->name('partners.add');
+    Route::post('/partners/add', 'Cms\PartnersController@create')->name('partners.create');
+    Route::get('/partners/{id}', 'Cms\PartnersController@edit')->name('partners.edit');
+    Route::post('/partners/{id}', 'Cms\PartnersController@update')->name('partners.update');
+    Route::get('/partners/delete/{id}', 'Cms\PartnersController@destroy')->name('partners.destroy');
 
     Route::get('/video', 'Cms\VideoController@index')->name('video');
-    Route::get('/video/{id}', 'Cms\VideoController@edit')->name('video.edit');
     Route::get('/video/add', 'Cms\VideoController@add')->name('video.add');
+    Route::post('/video/add', 'Cms\VideoController@create')->name('video.create');
+    Route::get('/video/{id}', 'Cms\VideoController@edit')->name('video.edit');
+    Route::post('/video/{id}', 'Cms\VideoController@update')->name('video.update');
+    Route::get('/video/delete/{id}', 'Cms\VideoController@destroy')->name('video.destroy');
 
     Route::get('/media', 'Cms\MediaController@index')->name('media');
     Route::get('/media/{id}', 'Cms\MediaController@edit')->name('media.edit');
@@ -72,7 +79,16 @@ Route::group(['domain' => 'cms.terraincognita.local'], function () {
     Route::get('/expeditions/sections/{id}', 'Cms\ExpeditionSectionsController@edit')->name('sections.edit');
     Route::get('/expeditions/{id}/sections/add', 'Cms\ExpeditionSectionsController@add')->name('sections.add');
 
-    Route::get('/', 'CmsController@index')->name('dashboard');
+    Route::get('/support', 'Cms\ContentController@support')->name('support');
+    Route::post('/support', 'Cms\ContentController@supportUpdate')->name('support.update');
+
+    Route::get('/about-us', 'Cms\ContentController@we')->name('we');
+    Route::post('/about-us', 'Cms\ContentController@we')->name('we.update');
+
+    Route::get('/contact', 'Cms\ContentController@contact')->name('contact');
+    Route::post('/contact', 'Cms\ContentController@contactUpdate')->name('contact.update');
+
+    Route::get('/', 'Cms\CmsController@index')->name('dashboard');
 
 });
 

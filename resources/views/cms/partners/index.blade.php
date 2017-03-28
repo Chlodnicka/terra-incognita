@@ -1,37 +1,46 @@
 @extends('layouts.cms-layout')
 
-@section('title', 'Aktualności')
+@section('title', 'Partnerzy')
 
 @section('content')
-    <div class="main-content">
-        <div class="row"><!-- row -->
-
-            <!-- About -->
-            <div class="col-md-12">
-                <h1 class="animbounceInLeft" data-time="600">ABOUT EXPEDITION</h1>
-                <h2 class="animbounceInLeft" data-time="900">world's best wildlife experiences</h2>
-                <div class="devider-page animfadeInLeft" data-time="1100"></div>
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Partnerzy</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li><a href="/partners/add"><i class="fa fa-plus"></i> Dodaj nowy</a></li>
+                </ul>
+                <div class="clearfix"></div>
             </div>
 
-
-            <div class="col-md-12 spacedown animfadeInUp" data-time="1800">
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+            <div class="x_content">
+                <p class="text-muted font-13 m-b-30">
+                    Partnerzy - opis
+                </p>
+                @if(count($partners) > 0)
+                    <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap"
+                           cellspacing="0" width="100%">
+                        <thead>
+                        <tr>
+                            <th>Nazwa</th>
+                            <th>Link do serwisu</th>
+                            <th>Obrazek główny</th>
+                            <th>Akcje</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach($partners as $item)
+                            <tr>
+                                <td>{{ $item->name }}</td>
+                                <td>{{ $item->link_to_site }}</td>
+                                <td>{{ $item->ico }}</td>
+                                <td><a href="partners/{{ $item->id }}">Edytuj</a> <a href="partners/delete/{{ $item->id }}">Usuń</a></td>
+                            </tr>
+                        @endforeach
+                        </tbody>
+                    </table>
+                @endif
             </div>
-
-            <!-- client brands-->
-            <div id="owl-brand" class="owl-carousel">
-                <div class="item"><img alt="background" src="img/ourclients/1.png"></div>
-                <div class="item"><img alt="background" src="img/ourclients/2.png"></div>
-                <div class="item"><img alt="background" src="img/ourclients/3.png"></div>
-                <div class="item"><img alt="background" src="img/ourclients/4.png"></div>
-                <div class="item"><img alt="background" src="img/ourclients/5.png"></div>
-                <div class="item"><img alt="background" src="img/ourclients/6.png"></div>
-                <div class="item"><img alt="background" src="img/ourclients/7.png"></div>
-                <div class="item"><img alt="background" src="img/ourclients/8.png"></div>
-                <div class="item"><img alt="background" src="img/ourclients/9.png"></div>
-            </div>
-            <!-- client brands end-->
-            <!-- About end -->
-        </div><!-- row end -->
+        </div>
     </div>
 @endsection
