@@ -7,7 +7,7 @@
     <meta content="" name="author">
     <meta content="" name="keywords">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
-    <link href="assets/css/main.min.css" media="all" rel="stylesheet" type="text/css">
+    <link href="{{ asset('assets/css/main.min.css') }}" media="all" rel="stylesheet" type="text/css">
 </head>
 <body>
 
@@ -25,15 +25,15 @@
     <div class="bgexpedition">
         <div id="owl-slider-home" class="owl-carousel">
             <div class="item">
-                <img alt="background" src="assets/img/bg-6.jpg">
+                <img alt="background" src="{{ asset('assets/img/bg-6.jpg') }}">
                 <div class="owl-slidertext">slide image 1/1</div>
             </div>
             <div class="item">
-                <img alt="background" src="assets/img/bg-3.jpg">
+                <img alt="background" src="{{ asset('assets/img/bg-3.jpg') }}">
                 <div class="owl-slidertext">slide image 1/2</div>
             </div>
             <div class="item">
-                <img alt="background" src="assets/img/bg-4.jpg">
+                <img alt="background" src="{{ asset('assets/img/bg-4.jpg') }}">
                 <div class="owl-slidertext">slide image 1/3</div>
             </div>
         </div>
@@ -44,7 +44,7 @@
     <!-- navigation -->
     <!-- logo -->
     <div id="logo" class="brand-expedition noselect animfadeInLeft" data-time="0">
-        <a href="index.html"><img alt="background" src="assets/img/logo.png"></a>
+        <a href="/"><img alt="background" src="{{ asset('assets/img/logo.png') }}"></a>
     </div>
 
     <!-- menu navigation -->
@@ -96,7 +96,7 @@
     <div class="nav-bottom">
         <div id="opengal">
             <i class="fa fa-angle-up"></i>
-            <span>experience</span>
+            <span>Galeria video</span>
         </div>
     </div>
     <!-- toggle gallery end -->
@@ -105,7 +105,7 @@
     <div class="bottom-option">
         <!-- close gallery -->
         <div class="nav-bottom-close">
-            <span>close</span>
+            <span>zamknij</span>
             <i class="fa fa-angle-down"></i>
         </div>
         <!-- close gallery end -->
@@ -113,113 +113,20 @@
         <!-- main gallery -->
         <div id="owl-gal" class="owl-carousel">
 
-            <div class="item">
-                <div class="port">
-                    <div class="hovereffect">
-                        <img class="gray-color" src="assets/img/portofolio/1.jpg" alt="imageportofolio"/>
-                        <div class="overlay">
-                            <h2>dailymotion video</h2>
-                            <a class="info big-video"
-                               href="http://www.dailymotion.com/video/x4gwyxl_happiness-royalty-free-music-for-commercial-use_music">click
-                                here</a>
+            @foreach($videos as $video)
+                <div class="item">
+                    <div class="port">
+                        <div class="hovereffect">
+                            <img class="gray-color" src="{{ $video->ico }}" alt="imageportofolio"/>
+                            <div class="overlay">
+                                <h2>{{ $video->title }}</h2>
+                                <a class="info big-video"
+                                   href="{{ $video->link_to_video }}">@if(!empty($video->lead)){{ $video->lead }}<br/><br/>@endif zobacz</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="item">
-                <div class="port">
-                    <div class="hovereffect">
-                        <img class="gray-color" src="assets/img/portofolio/2.jpg" alt="imageportofolio"/>
-                        <div class="overlay">
-                            <h2>Lattest news</h2>
-                            <a class="info detail-page" href="page-news/news-2.html">click here</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item">
-                <div class="port big-img">
-                    <div class="hovereffect">
-                        <a href="img/portofolio/3.jpg">
-                            <img class="gray-color" src="assets/img/portofolio/3.jpg" alt="imageportofolio"/>
-                            <div class="overlay">
-                                <h2>portofolio image</h2>
-                                <span class="info">click here</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item">
-                <div class="port big-img">
-                    <div class="hovereffect">
-                        <a href="img/portofolio/4.jpg">
-                            <img class="gray-color" src="assets/img/portofolio/4.jpg" alt="imageportofolio"/>
-                            <div class="overlay">
-                                <h2>portofolio image</h2>
-                                <span class="info">click here</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item">
-                <div class="port big-img">
-                    <div class="hovereffect">
-                        <a href="img/portofolio/5.jpg">
-                            <img class="gray-color" src="assets/img/portofolio/5.jpg" alt="imageportofolio"/>
-                            <div class="overlay">
-                                <h2>portofolio image</h2>
-                                <span class="info">click here</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item">
-                <div class="port big-img">
-                    <div class="hovereffect">
-                        <a href="img/portofolio/6.jpg">
-                            <img class="gray-color" src="assets/img/portofolio/6.jpg" alt="imageportofolio"/>
-                            <div class="overlay">
-                                <h2>portofolio image</h2>
-                                <span class="info">click here</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item">
-                <div class="port">
-                    <div class="hovereffect">
-                        <img class="gray-color" src="assets/img/portofolio/7.jpg" alt="imageportofolio"/>
-                        <div class="overlay">
-                            <h2>Lattest news</h2>
-                            <a class="info detail-page" href="page-news/news-2.html">click here</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item">
-                <div class="port">
-                    <div class="hovereffect">
-                        <img class="gray-color" src="assets/img/portofolio/1.jpg" alt="imageportofolio"/>
-                        <div class="overlay">
-                            <h2>youtube video</h2>
-                            <a class="info big-youtube" href="https://www.youtube.com/watch?v=VsJkxWvQJIM">click
-                                here</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+            @endforeach
 
         </div>
         <!-- main gallery end -->
@@ -245,6 +152,6 @@
 <!-- expedition JS -->
 
 @yield('js')
-<script src="assets/js/main.min.js" type="text/javascript"></script>
+<script src="{{ asset('assets/js/main.min.js') }}" type="text/javascript"></script>
 </body>
 </html>

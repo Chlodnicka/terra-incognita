@@ -30,7 +30,7 @@ class PartnersController extends BaseController
     {
         $partners = new Partner();
         $partners->fill($request->all());
-        $partners->ico = 'test'; //do wykomentowania jak zrobię mechanizm ładujacy zdjecia
+
         if ($partners->save()) {
             $request->session()->flash('alert_success', 'Dane zostały zapisane');
         } else {

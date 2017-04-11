@@ -1,46 +1,48 @@
 @extends('layouts.cms-layout')
 
-@section('title', 'Aktualności')
+@section('title', 'Wyprawy')
 
 @section('content')
-
-
-    <!-- content -->
-    <div class="main-content">
-        <div class="row"><!-- row -->
-
-            <!-- Discover -->
-            <div class="col-md-12 spacedown">
-                <h1 class="animbounceInLeft" data-time="600">DISCOVER EXPEDITION</h1>
-                <h2 class="animbounceInLeft" data-time="900">the world of adventure challenge</h2>
-                <div class="devider-page animfadeInLeft" data-time="1100"></div>
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Wyprawy</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li><a href="/expedition/add"><i class="fa fa-plus"></i> Dodaj nową</a></li>
+                </ul>
+                <div class="clearfix"></div>
             </div>
 
-            <div class="col-md-12 color-gray spacedown animfadeInUp" data-time="1300">
-                <h3>Explorer</h3>
-                <div class="devider-page-content"></div>
-                <img class="img-cont" alt="discoverimage" src="img/discover/explorer.jpg">
-                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehnderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-                <div class="btn-content"><a class="detail-page link-class" href="page-discover/exp.html">THE TEAM</a></div>
+            <div class="x_content">
+                <p class="text-muted font-13 m-b-30">
+                    Wyprawy - opis
+                </p>
+                @if(count($expeditions) > 0)
+                    <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap"
+                           cellspacing="0" width="100%">
+                        <thead>
+                        <tr>
+                            <th>Tytuł</th>
+                            <th>Zajawka</th>
+                            <th>Obrazek główny</th>
+                            <th>Data</th>
+                            <th>Akcje</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach($expeditions as $item)
+                            <tr>
+                                <td>{{ $item->title }}</td>
+                                <td>{{ $item->lead }}</td>
+                                <td>{{ $item->ico }}</td>
+                                <td>{{ $item->date }}</td>
+                                <td><a href="expedition/{{ $item->id }}">Edytuj</a> <a href="expedition/delete/{{ $item->id }}">Usuń</a></td>
+                            </tr>
+                        @endforeach
+                        </tbody>
+                    </table>
+                @endif
             </div>
-
-            <div class="col-md-12 color-gray spacedown animfadeInUp" data-time="1600">
-                <h3>Sea Discover</h3>
-                <div class="devider-page-content"></div>
-                <img class="img-cont" alt="discoverimage" src="img/discover/sea.jpg">
-                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehnderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-                <div class="btn-content"><a class="detail-page link-class" href="page-discover/seadis.html">THE TEAM</a></div>
-            </div>
-
-            <div class="col-md-12 color-gray spacedown">
-                <h3>Hike</h3>
-                <div class="devider-page-content"></div>
-                <img class="img-cont" alt="discoverimage" src="img/discover/hike.jpg">
-                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehnderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-                <div class="btn-content"><a class="detail-page link-class" href="page-discover/hike.html">THE TEAM</a></div>
-            </div>
-
-            <!-- Discover end -->
-        </div><!-- row end -->
+        </div>
     </div>
 @endsection

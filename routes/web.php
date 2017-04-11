@@ -23,18 +23,18 @@ Route::group(['domain' => 'terraincognita.local'], function () {
 
 
     Route::get('my', 'Frontend\ContentController@we')->name('content.we');
-    Route::get('w-mediach', 'Frontend\MediaController@show')->name('media.index');
+    Route::get('w-mediach', 'Frontend\ContentController@media')->name('media.index');
     Route::get('partnerzy-i-sponsorzy', 'Frontend\PartnersController@index')->name('partners.index');
     Route::get('wesprzyj-nas', 'Frontend\ContentController@support')->name('content.support');
     Route::get('kontakt', 'Frontend\ContentController@contact')->name('content.contact');
 
 
-    Route::get('wyprawy/{id}', 'Frontend\VentureController@show')->name('venture.show');
-    Route::get('wyprawy/{id}/', 'Frontend\VentureController@show');
-    Route::get('wyprawy/index', 'Frontend\VentureController@index');
-    Route::get('wyprawy/index/', 'Frontend\VentureController@index');
-    Route::get('nasze-wyprawy', 'Frontend\VentureController@index')->name('venture.index');
-    Route::get('wyprawy/', 'Frontend\VentureController@index');
+    Route::get('wyprawy/{id}', 'Frontend\ExpeditionController@show')->name('venture.show');
+    Route::get('wyprawy/{id}/', 'Frontend\ExpeditionController@show');
+    Route::get('wyprawy/index', 'Frontend\ExpeditionController@index');
+    Route::get('wyprawy/index/', 'Frontend\ExpeditionController@index');
+    Route::get('nasze-wyprawy', 'Frontend\ExpeditionController@index')->name('venture.index');
+    Route::get('wyprawy/', 'Frontend\ExpeditionController@index');
 });
 
 Route::group(['domain' => 'cms.terraincognita.local'], function () {
@@ -63,30 +63,31 @@ Route::group(['domain' => 'cms.terraincognita.local'], function () {
     Route::post('/video/{id}', 'Cms\VideoController@update')->name('video.update');
     Route::get('/video/delete/{id}', 'Cms\VideoController@destroy')->name('video.destroy');
 
-    Route::get('/media', 'Cms\MediaController@index')->name('media');
-    Route::get('/media/{id}', 'Cms\MediaController@edit')->name('media.edit');
-    Route::get('/media/add', 'Cms\MediaController@add')->name('media.add');
 
     Route::get('/multimedia', 'Cms\MultimediaController@index')->name('multimedia');
     Route::get('/multimedia/{id}', 'Cms\MultimediaController@index')->name('multimedia.edit');
     Route::get('/multimedia/add', 'Cms\MultimediaController@add')->name('multimedia.add');
 
-    Route::get('/expeditions', 'Cms\PartnersController@index')->name('expeditions');
-    Route::get('/expeditions/{id}', 'Cms\PartnersController@index')->name('expeditions.edit');
-    Route::get('/expeditions/add', 'Cms\PartnersController@add')->name('expeditions.add');
+    Route::get('/expeditions', 'Cms\ExpeditionController@index')->name('expeditions');
+    Route::get('/expedition/{id}', 'Cms\ExpeditionController@edit')->name('expeditions.edit');
+    Route::post('/expedition/{id}', 'Cms\ExpeditionController@update')->name('expeditions.update');
+    Route::get('/expedition/{id}/', 'Cms\ExpeditionController@edit');
+    Route::get('/expedition/add', 'Cms\ExpeditionController@add')->name('expeditions.add');
+    Route::post('/expedition/add', 'Cms\ExpeditionController@create')->name('expeditions.create');
 
-    Route::get('/expeditions/{id}/sections', 'Cms\ExpeditionSectionsController@index')->name('sections');
-    Route::get('/expeditions/sections/{id}', 'Cms\ExpeditionSectionsController@edit')->name('sections.edit');
-    Route::get('/expeditions/{id}/sections/add', 'Cms\ExpeditionSectionsController@add')->name('sections.add');
+    Route::get('/expedition/section/{id}', 'Cms\ExpeditionSectionController@edit')->name('sections.edit');
 
     Route::get('/support', 'Cms\ContentController@support')->name('support');
     Route::post('/support', 'Cms\ContentController@supportUpdate')->name('support.update');
 
     Route::get('/about-us', 'Cms\ContentController@we')->name('we');
-    Route::post('/about-us', 'Cms\ContentController@we')->name('we.update');
+    Route::post('/about-us', 'Cms\ContentController@weUpdate')->name('we.update');
 
     Route::get('/contact', 'Cms\ContentController@contact')->name('contact');
     Route::post('/contact', 'Cms\ContentController@contactUpdate')->name('contact.update');
+
+    Route::get('/media', 'Cms\ContentController@media')->name('media');
+    Route::post('/media', 'Cms\ContentController@mediaUpdate')->name('media.update');
 
     Route::get('/', 'Cms\CmsController@index')->name('dashboard');
 

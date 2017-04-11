@@ -9,6 +9,8 @@ class Content extends Model
 
     protected $table = 'contents';
 
+    protected $fillable = ['lead', 'string_1', 'text', 'string_2', 'string_3', 'string_4', 'long_string_1'];
+
     /**
      * Get gallery items for content
      */

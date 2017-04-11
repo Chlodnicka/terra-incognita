@@ -27,34 +27,13 @@ class ContentController extends BaseController
     public function contact()
     {
         $content = Content::getByType('CONTACT');
-        return view('frontend.content.contact');
+        return view('frontend.content.contact', ['content' => $content]);
     }
 
-
-
-    public function create()
+    public function media()
     {
-        $content = new Content();
-
-        return redirect('/content');
-    }
-
-    public function edit($id)
-    {
-        $content = Content::all();
-        return view('frontend.content.index', ['content' => $content]);
-    }
-
-    public function update($id)
-    {
-        $content = Content::all();
-        return view('frontend.content.index', ['content' => $content]);
-    }
-
-    public function destroy($id)
-    {
-        $content = Content::all();
-        return view('frontend.content.index', ['content' => $content]);
+        $content = Content::getByType('MEDIA');
+        return view('frontend.content.media', ['content' => $content]);
     }
 
 }

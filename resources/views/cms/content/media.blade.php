@@ -1,6 +1,6 @@
 @extends('layouts.cms-layout')
 
-@section('title', 'Wesprzyj nas')
+@section('title', 'O nas w mediach')
 
 @section('content')
 
@@ -8,7 +8,7 @@
         <div class="col-md-12 col-xs-12">
             <div class="x_panel">
                 <div class="x_name">
-                    <h2>Wesprzyj nas</h2>
+                    <h2>W mediach</h2>
                     <ul class="nav navbar-right panel_toolbox">
                         <li><a class="close-link" href="/"><i class="fa fa-arrow-left"></i> Wróć</a></li>
                     </ul>
@@ -16,7 +16,7 @@
                 </div>
                 <div class="x_content">
                     <br/>
-                    <form class="form-horizontal form-label-left" method="post" action="/support"
+                    <form class="form-horizontal form-label-left" method="post" action="/media"
                           enctype="multipart/form-data">
                         {{ csrf_field() }}
                         @foreach ($errors->all() as $error)

@@ -16,7 +16,7 @@
                 </div>
                 <div class="x_content">
                     <br/>
-                    <form class="form-horizontal form-label-left" method="post" action="/video/add"
+                    <form class="form-horizontal form-label-left" method="post" action="/about-us"
                           enctype="multipart/form-data">
                         {{ csrf_field() }}
                         @foreach ($errors->all() as $error)
@@ -28,12 +28,7 @@
                                 <input type="text" class="form-control" name="lead" id="lead" value="">
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Maciek - zdjęcie</label>
-                            <div class="col-md-9 col-sm-9 col-xs-12">
-                                <input type="file" class="form-control" name="ico" id="ico">
-                            </div>
-                        </div>
+
                         <div class="form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12">Maciek - opis</label>
                             <div class="col-md-9 col-sm-9 col-xs-12">
@@ -42,15 +37,9 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Grzesiek - zdjęcie</label>
-                            <div class="col-md-9 col-sm-9 col-xs-12">
-                                <input type="file" class="form-control" name="string_1" id="string_1">
-                            </div>
-                        </div>
-                        <div class="form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12">Grzesiek - opis</label>
                             <div class="col-md-9 col-sm-9 col-xs-12">
-                                <textarea cols="50" id="long_string_1" name="long_string_1" placeholder="" rows="4">{!! $content->text !!}</textarea>
+                                <textarea cols="50" id="long_string_1" name="long_string_1" placeholder="" rows="4">{!! $content->long_string_1 !!}</textarea>
                             </div>
                         </div>
 

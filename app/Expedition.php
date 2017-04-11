@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Expedition extends Model
 {
 
-   // protected $table = 'contents';
+    // protected $table = 'contents';
+    protected $fillable = ['title', 'ico', 'text', 'link_to_video', 'date', 'lead'];
 
     /**
      * Get gallery items for content
@@ -17,9 +18,10 @@ class Expedition extends Model
         return $this->belongsToMany('App\Multimedia');
     }
 
-    public static function getByType($type)
+    public function sections()
     {
-        return Content::where('type', $type)->get();
+        return $this->hasMany('App\ExpeditionSection');
     }
+
 
 }

@@ -33,7 +33,7 @@
                             <tr>
                                 <td>{{ $item->name }}</td>
                                 <td>{{ $item->link_to_site }}</td>
-                                <td>{{ $item->ico }}</td>
+                                <td>@if(!empty($item->ico))<img style="max-height: 100px" src="{{ $item->ico }}"/>@else brak zdjęcia @endif</td>
                                 <td><a href="partners/{{ $item->id }}">Edytuj</a> <a href="partners/delete/{{ $item->id }}">Usuń</a></td>
                             </tr>
                         @endforeach

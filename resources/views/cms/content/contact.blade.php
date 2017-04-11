@@ -4,53 +4,85 @@
 
 @section('content')
 
-    <div class="main-content">
-        <div class="row"><!-- row -->
+    <div class="">
+        <div class="col-md-12 col-xs-12">
+            <div class="x_panel">
+                <div class="x_name">
+                    <h2>Kontakt</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li><a class="close-link" href="/"><i class="fa fa-arrow-left"></i> Wróć</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <br/>
+                    <form class="form-horizontal form-label-left" method="post" action="/contact"
+                          enctype="multipart/form-data">
+                        {{ csrf_field() }}
+                        @foreach ($errors->all() as $error)
+                            <p class="error">{{ $error }}</p>
+                        @endforeach
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Zajawka</label>
+                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                <input type="text" class="form-control" name="lead" id="lead" value="{{ $content->lead }}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Zdjęcie główne</label>
+                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                <div class="input-group">
+                           <span class="input-group-btn">
+                             <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
+                               <i class="fa fa-picture-o"></i> Wybierz
+                             </a>
+                           </span>
+                                    <input id="thumbnail" class="form-control" type="text" name="string_1">
+                                </div>
+                                <img id="holder" style="margin-top:15px;max-height:100px;"
+                                     src="{{ $content->string_1 }}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Dane osobowe</label>
+                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                <input type="text" class="form-control" name="string_2" id="string_2" value="{{ $content->string_2 }}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Email</label>
+                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                <input type="text" class="form-control" name="string_3" id="string_3" value="{{ $content->string_3 }}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Telefon</label>
+                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                <input type="text" class="form-control" name="long_string_1" id="long_string_1" value="{{ $content->long_string_1 }}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Tekst główny</label>
+                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                <textarea cols="50" id="text" name="text" placeholder=""
+                                          rows="4">{!! $content->text !!}</textarea>
+                            </div>
+                        </div>
 
-            <!-- contact -->
-            <div class="col-md-12">
-                <h1 class="animbounceInLeft" data-time="600">GET IN TOUCH</h1>
-                <h2 class="animbounceInLeft" data-time="900">Ask you travel tips, ideas or inspiration?</h2>
-                <div class="devider-page animfadeInLeft" data-time="1100"></div>
-            </div>
+                        <div class="ln_solid"></div>
+                        <div class="form-group">
+                            <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+                                <a href="/" class="btn btn-primary">Anuluj</a>
+                                <input type="submit" class="btn btn-success" value="Wyślij"/>
+                            </div>
+                        </div>
 
-            <div class="col-md-4 col-xs-12 spaceup spacedown animfadeInUp" data-time="1100">
-                <h4>GDZIE NAS ZNALEŹĆ</h4>
-                <p>129 Park Ave, New York, NY 10903</p>
-            </div>
-
-            <div class="col-md-4 col-xs-12 spaceup spacedown animfadeInUp" data-time="1400">
-                <h4>ZADZWOŃ</h4>
-                <p>+6221.987.654.321</p>
-            </div>
-
-            <div class="col-md-4 col-xs-12 spaceup spacedown animfadeInUp" data-time="1700">
-                <h4>WYŚLIJ MAILA</h4>
-                <a href="mailto:service@vertix.com?Subject=Hello%20again">marketing@expediton.com</a>
-            </div>
-
-            <!-- map -->
-            <div id="map" class="spacedown animfadeInUp" data-time="2000"></div>
-
-            <!-- contact form -->
-            <div class="col-md-12 col-xs-12 spacedown animfadeInUp" data-time="2400">
-                <div class="form-group contact">
-                    <form action="#" class="row" id="form1" method="post" name="form1">
-                        <input id="name" name="name" placeholder="your name" type="text">
-                        <input id="email" name="email" placeholder="your e-mail" type="text">
-                        <div class="error" id="error_email">Please check your email</div>
-                        <textarea cols="50" id="message" name="message" placeholder="your enquiry" rows="4"></textarea>
-                        <div class="error" id="error_message">Please check your message</div>
-                        <div class="success" id="mail_success">Thank you. Your message has been sent.</div>
-                        <div class="error" id="mail_failed">Error, email not sent</div>
-                        <button id="send" class="btn-content" type="submit">SENT NOW</button>
                     </form>
                 </div>
             </div>
-            <!-- contact form end -->
-            <!-- contact end -->
-        </div><!-- row end -->
+        </div>
     </div>
+
 @endsection
 
 @section('js')

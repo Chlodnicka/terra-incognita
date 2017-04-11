@@ -314,7 +314,14 @@
     tinymce.init(editor_config);
 </script>
 <!-- Custom Theme Scripts -->
+<script src="{!! asset('/vendor/laravel-filemanager/js/lfm.js') !!}"></script>
 <script src="{!! asset('assets/build/js/custom.min.js') !!}"></script>
+<script>
+    var domain = "";
+    $('#lfm').filemanager('image', {prefix: domain});
+
+    console.log($('#lfm'));
+</script>
 
 </body>
 </html>

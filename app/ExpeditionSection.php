@@ -4,16 +4,16 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class VentureSection extends Model
+class ExpeditionSection extends Model
 {
-    protected $table = 'ventures';
+    protected $table = 'expedition_sections';
 
     /**
      * Get sections for venture.
      */
-    public function venture()
+    public function expedition()
     {
-        return $this->belongsTo('App\Venture');
+        return $this->belongsTo('App\Expedition');
     }
 
     /**

@@ -8,18 +8,20 @@
         <div class="row"><!-- row -->
             <!-- col -->
             <div class="col-md-12">
-                <h1 class="animfadeInUpBig" data-time="1500">AWESOME YOUR LIFE</h1>
-                <div class="devider-center animfadeInUpBig" data-time="1700"></div>
-                <div id="slidertext" class="animfadeInUpBig" data-time="1800">
-                    <div class="main-text">wild experience</div>
-                    <div class="main-text">awesome life</div>
-                    <div class="main-text">challenge your life</div>
-                </div>
+                <h1 class="animfadeInUpBig" data-time="1500">TERRA INCOGNITA PROJECT</h1>
+                <!--     <div class="devider-center animfadeInUpBig" data-time="1700"></div>
+                   <div id="slidertext" class="animfadeInUpBig" data-time="1800">
+                        <div class="main-text">wild experience</div>
+                        <div class="main-text">awesome life</div>
+                        <div class="main-text">challenge your life</div>
+                    </div>-->
 
-                <div class="btn-home animfadeInLeft" data-time="2100"><a class="link-class" href="discover.html">DISCOVER</a>
+                <div class="btn-home animfadeInLeft" data-time="2100"><a class="link-class" href="/wyprawy">WYPRAWY</a>
                 </div>
-                <div class="btn-home animfadeInRight" data-time="2400"><a class="popup-form link-class" href="#subwrap">JOIN
-                        US</a></div>
+                <div class="btn-home animfadeInLeft" data-time="2100"><a class="link-class" href="/o-nas">O NAS</a>
+                </div>
+                <div class="btn-home animfadeInRight" data-time="2400"><a class="link-class" href="/aktualnosci">AKTUALNOŚCI</a>
+                </div>
 
             </div>
             <!-- col end -->
