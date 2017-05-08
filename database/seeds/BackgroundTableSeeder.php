@@ -43,5 +43,10 @@ class BackgroundTableSeeder extends Seeder
             'type' => 'contact',
             'ico' => 'asd'
         ] );
+
+        Background::create( [
+            'type' => 'media',
+            'ico' => 'asd'
+        ] );
     }
 }
