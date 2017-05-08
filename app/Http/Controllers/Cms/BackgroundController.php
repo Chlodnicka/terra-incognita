@@ -26,7 +26,7 @@ class BackgroundController extends BaseController
             $request->session()->flash('alert_success', 'Błąd zapisu danych. Spróbuj jeszcze raz.');
         }
 
-//        return view('cms.videos.edit');
+         return back();
     }
 
 }
