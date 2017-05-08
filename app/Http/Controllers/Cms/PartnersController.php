@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\Http\Requests\UpdatePartnersItem as Update;
 use App\Http\Requests\CreatePartnersItem as Create;
 use App\Partner;
+use App\Background;
 
 class PartnersController extends BaseController
 {
@@ -17,7 +18,8 @@ class PartnersController extends BaseController
     public function index()
     {
         $partners = Partner::all();
-        return view('cms.partners.index', ['partners' => $partners]);
+        $background = Background::findOrFail(2);
+        return view('cms.partners.index', ['partners' => $partners, 'background' => $background]);
     }
 
 

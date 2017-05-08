@@ -2,6 +2,8 @@
 
 @section('title', 'Aktualności')
 
+@section('background', $background->ico)
+
 @section('content')
     <div class="main-content">
         <div class="row"><!-- row -->

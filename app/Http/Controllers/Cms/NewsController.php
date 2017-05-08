@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Cms;
 
+use App\Background;
 use App\Http\Requests\UpdateNewsItem;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
@@ -18,7 +19,8 @@ class NewsController extends BaseController
     public function index()
     {
         $news = News::all();
-        return view('cms.news.index', ['news' => $news]);
+        $background = Background::findOrFail(1);
+        return view('cms.news.index', ['news' => $news, 'background' => $background]);
     }
 
 

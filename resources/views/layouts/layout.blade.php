@@ -38,13 +38,13 @@
             </div>
         </div>
     </div>
-    <div class="bgcolor noselect"></div>
+    <div class="bgcolor noselect" style="background-size: 100%; background-image:url('@yield('background')')"></div>
 
 
     <!-- navigation -->
     <!-- logo -->
     <div id="logo" class="brand-expedition noselect animfadeInLeft" data-time="0">
-        <a href="/"><img alt="background" src="{{ asset('assets/img/logo.png') }}"></a>
+        <a href="/"><img alt="background" style="max-width: 150px" src="{{ asset('assets/img/logo.png') }}"></a>
     </div>
 
     <!-- menu navigation -->
@@ -121,7 +121,8 @@
                             <div class="overlay">
                                 <h2>{{ $video->title }}</h2>
                                 <a class="info big-video"
-                                   href="{{ $video->link_to_video }}">@if(!empty($video->lead)){{ $video->lead }}<br/><br/>@endif zobacz</a>
+                                   href="{{ $video->link_to_video }}">@if(!empty($video->lead)){{ $video->lead }}<br/>
+                                    <br/>@endif zobacz</a>
                             </div>
                         </div>
                     </div>

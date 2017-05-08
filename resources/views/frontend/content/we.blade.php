@@ -2,6 +2,8 @@
 
 @section('title', 'O nas')
 
+@section('background', $background->ico)
+
 @section('content')
 
     <div class="main-content">

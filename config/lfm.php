@@ -24,13 +24,15 @@ return [
     */
 
     // If true, private folders will be created for each signed-in user.
-    'allow_multi_user' => false,
+    'allow_multi_user' => true,
     // If true, share folder will be created when allow_multi_user is true.
     'allow_share_folder' => true,
 
-    // The database column to identify a user. Make sure the value is unique.
-    // Ex: When set to 'id', the private folder of user will be named as the user id.
-    'user_field' => 'id',
+    // Flexibla way to customize client folders accessibility
+    // Ex: The private folder of user will be named as the user id.
+    'user_field' => function() {
+        return auth()->user()->id;
+    },
 
     /*
     |--------------------------------------------------------------------------
@@ -56,7 +58,7 @@ return [
 
     // The default display type for items.
     // Supported: "grid", "list"
-    'images_startup_view' => 'list',
+    'images_startup_view' => 'grid',
     'files_startup_view' => 'list',
 
     /*
@@ -88,7 +90,8 @@ return [
         'image/jpeg',
         'image/pjpeg',
         'image/png',
-        'image/gif'
+        'image/gif',
+        'image/svg+xml',
     ],
 
     // available since v1.3.0
@@ -98,6 +101,7 @@ return [
         'image/pjpeg',
         'image/png',
         'image/gif',
+        'image/svg+xml',
         'application/pdf',
         'text/plain',
     ],
