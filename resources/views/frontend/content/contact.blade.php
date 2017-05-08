@@ -2,6 +2,8 @@
 
 @section('title', 'Skontaktuj się z nami')
 
+@section('background', $background->ico)
+
 @section('content')
 
     <div class="main-content">

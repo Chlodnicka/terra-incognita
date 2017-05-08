@@ -75,6 +75,8 @@ Route::group(['domain' => 'cms.terraprojekt.com.pl'], function () {
     Route::get('/expedition/add', 'Cms\ExpeditionController@add')->name('expeditions.add');
     Route::post('/expedition/add', 'Cms\ExpeditionController@create')->name('expeditions.create');
 
+    Route::post('/backgrounds/{id}', 'Cms\BackgroundController@update')->name('background.update');
+
     Route::get('/expedition/section/{id}', 'Cms\ExpeditionSectionController@edit')->name('sections.edit');
 
     Route::get('/support', 'Cms\ContentController@support')->name('support');

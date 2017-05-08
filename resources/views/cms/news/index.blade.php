@@ -15,7 +15,30 @@
 
             <div class="x_content">
                 <p class="text-muted font-13 m-b-30">
-                    Aktualności - opis
+                <form method="post" action="backgrounds/1">
+                    {{ csrf_field() }}
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Zdjęcie w tle</label>
+                        <input type="hidden" value="{{ $background->ico }}"/>
+                        <input type="hidden" name="type" value="news"/>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                            <div class="input-group">
+                                               <span class="input-group-btn">
+                                                 <a id="lfm" data-input="thumbnail" data-preview="holder"
+                                                    class="btn btn-primary">
+                                                   <i class="fa fa-picture-o"></i> Wybierz
+                                                 </a>
+                                               </span>
+                                <input id="thumbnail" class="form-control" type="text" name="ico">
+                            </div>
+                            <img id="holder" style="margin-top:15px;max-height:100px;"
+                                 src="{{ $background->ico }}">
+                        </div>
+                    </div>
+                    <div class="">
+                        <button type="submit">Zapisz</button>
+                    </div>
+                </form>
                 </p>
                 @if(count($news) > 0)
                     <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap"
@@ -36,7 +59,8 @@
                                 <td>{{ $item->lead }}</td>
                                 <td>{{ $item->ico }}</td>
                                 <td>{{ $item->date }}</td>
-                                <td><a href="news/{{ $item->id }}">Edytuj</a> <a href="news/delete/{{ $item->id }}">Usuń</a></td>
+                                <td><a href="news/{{ $item->id }}">Edytuj</a> <a
+                                            href="news/delete/{{ $item->id }}">Usuń</a></td>
                             </tr>
                         @endforeach
                         </tbody>

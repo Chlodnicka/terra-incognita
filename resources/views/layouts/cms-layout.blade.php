@@ -275,9 +275,14 @@
 <!-- bootstrap-daterangepicker -->
 <script src="{!! asset('assets/vendors/moment/min/moment.min.js') !!}"></script>
 <script src="{!! asset('assets/vendors/bootstrap-daterangepicker/daterangepicker.js') !!}"></script>
+<script src="{!! asset('https://code.jquery.com/ui/1.12.1/jquery-ui.js') !!}"></script>
 
 <script src="{!! asset('assets/vendors/tinymce/tinymce.min.js') !!}"></script>
 <script>
+    $( function() {
+        $( "#datepicker" ).datepicker();
+    } );
+
     var editor_config = {
         path_absolute: "/",
         selector: "textarea",

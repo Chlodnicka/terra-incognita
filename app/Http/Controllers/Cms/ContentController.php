@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Cms;
 
+use App\Background;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -19,7 +20,8 @@ class ContentController extends BaseController
     public function we()
     {
         $content = Content::getByType('ABOUT');
-        return view('cms.content.we', ['content' => $content]);
+        $background = Background::findOrFail(5);
+        return view('cms.content.we', ['content' => $content, 'background' => $background]);
     }
 
     public function weUpdate(UpdateWe $request)
@@ -37,7 +39,8 @@ class ContentController extends BaseController
     public function support()
     {
         $content = Content::getByType('SUPPORT');
-        return view('cms.content.support', ['content' => $content]);
+        $background = Background::findOrFail(4);
+        return view('cms.content.support', ['content' => $content, 'background' => $background]);
     }
 
     public function supportUpdate(UpdateSupport $request)
@@ -55,7 +58,8 @@ class ContentController extends BaseController
     public function contact()
     {
         $content = Content::getByType('CONTACT');
-        return view('cms.content.contact', ['content' => $content]);
+        $background = Background::findOrFail(6);
+        return view('cms.content.contact', ['content' => $content, 'background' => $background]);
     }
 
     public function contactUpdate(UpdateContact $request)
