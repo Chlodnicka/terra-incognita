@@ -33,31 +33,17 @@ class ExpeditionSectionController extends BaseController
 
     public function update(UpdateExpedition $request, $id)
     {
-        $expedition = Expedition::findOrFail($id);
-        $expedition->fill($request->all());
-        $new_sections = $request->get('sections');
-        $old_sections = $expedition->sections->pluck('type')->toArray();
+        $section = ExpeditionSection::findOrFail($id);
+        $section->fill($request->all());
 
-        $add_sections = array_diff($new_sections,$old_sections);
-        $remove_sections = array_diff($old_sections, $new_sections);
 
-        if ($expedition->save()) {
-            foreach ($add_sections as $section) {
-                $expeditionSection = new ExpeditionSection();
-                $expeditionSection->type = $section;
-                $expeditionSection->expedition_id = $expedition->id;
-                $expeditionSection->save();
-            }
-            foreach ($remove_sections as $section) {
-                $expeditionSection = ExpeditionSection::where('expedition_id', $expedition->id)->where('type', $section)->first();
-                $expeditionSection->delete();
-            }
+        if ($section->save()) {
             $request->session()->flash('alert_success', 'Dane zostały zapisane');
         } else {
             $request->session()->flash('alert_success', 'Błąd zapisu danych. Spróbuj jeszcze raz.');
         }
 
-        return redirect('/expedition/' . $expedition->id);
+        return redirect('/expedition/section/' . $section->id);
     }
 
 }

@@ -8,6 +8,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\Background;
 use App\Content;
+use App\Mail;
 
 class ContentController extends BaseController
 {
@@ -31,7 +32,29 @@ class ContentController extends BaseController
     {
         $content = Content::getByType('CONTACT');
         $background = Background::findOrFail(6);
-        return view('frontend.content.contact', ['content' => $content, 'background' => $background]);
+        if (request()->get('send')) {
+            if (request()->get('send') == 1) {
+                $form = 'sent';
+            } else {
+                $form = 'error';
+            }
+        } else {
+            $form = 'no';
+        }
+        return view('frontend.content.contact', ['content' => $content, 'background' => $background, 'form' => $form]);
+    }
+
+    public function contactSend()
+    {
+        $mail = new Mail;
+        $mail->fill(request()->all());
+        if ($mail->save()) {
+            //wyslij mail
+            return redirect('/kontakt?send=1');
+        } else {
+            return redirect('/kontakt?send=-1');
+        }
+
     }
 
     public function media()

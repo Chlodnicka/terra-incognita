@@ -33,19 +33,24 @@
 
             <!-- map
             <div id="map" class="spacedown animfadeInUp" data-time="2000"></div>-->
-
             <!-- contact form -->
             <div class="col-md-12 col-xs-12 spacedown animfadeInUp" data-time="2400">
+                @if($form == 'sent')
+                    <p>Wiadomość została wysłana</p>
+                @elseif($form == 'error')
+                    <p>Błąd podczas wysyłania. Spróbuj jeszcze raz za kilka minut.</p>
+                @endif
                 <div class="form-group contact">
-                    <form action="send-mail" class="row" id="form1" method="post" name="form1">
+                    <form action="/wyslij-mail" class="row" id="form1" method="post" name="form1">
+                        {!! csrf_field() !!}
                         <input id="name" name="name" placeholder="Imię" type="text">
                         <input id="email" name="email" placeholder="E-mail" type="text">
                         <div class="error" id="error_email">Wpisz poprawny adres e-mail</div>
-                        <textarea cols="50" id="message" name="message" placeholder="Treść" rows="4"></textarea>
+                        <textarea cols="50" id="message" name="content" placeholder="Treść" rows="4"></textarea>
                         <div class="error" id="error_message">To pole jest wymagane</div>
                         <div class="success" id="mail_success">Dzięki - Twoja wiadomość została wysłana</div>
                         <div class="error" id="mail_failed">Wystąpił błąd - spróbuj jeszcze raz.</div>
-                        <button id="send" class="btn-content" type="submit">WYŚLIJ</button>
+                        <button class="btn-content" type="submit">WYŚLIJ</button>
                     </form>
                 </div>
             </div>

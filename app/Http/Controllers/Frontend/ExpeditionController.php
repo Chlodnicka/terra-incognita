@@ -20,38 +20,38 @@ class ExpeditionController extends BaseController
 
     public function show($id)
     {
-        $venture = Venture::findOrFail($id);
-        return view('frontend.ventures.show', ['venture' => $venture]);
+        $expedition = Expedition::findOrFail($id);
+        return view('frontend.expeditions.show', ['expedition' => $expedition]);
     }
 
     public function add()
     {
-        return view('frontend.ventures.add');
+        return view('frontend.expeditions.add');
     }
 
     public function create()
     {
-        $ventures = new Venture();
+        $expedition = new Expedition();
 
         return redirect('/ventures');
     }
 
     public function edit($id)
     {
-        $ventures = Venture::all();
-        return view('frontend.ventures.index', ['ventures' => $ventures]);
+        $expeditions = Expedition::all();
+        return view('frontend.expeditions.index', ['expeditions' => $expeditions]);
     }
 
     public function update($id)
     {
-        $ventures = Venture::all();
-        return view('frontend.ventures.index', ['ventures' => $ventures]);
+        $expeditions = Expedition::all();
+        return view('frontend.expeditions.index', ['expeditions' => $expeditions]);
     }
 
     public function destroy($id)
     {
-        $ventures = Venture::all();
-        return view('frontend.ventures.index', ['ventures' => $ventures]);
+        $expeditions = Expedition::all();
+        return view('frontend.expeditions.index', ['expeditions' => $expeditions]);
     }
 
 }
