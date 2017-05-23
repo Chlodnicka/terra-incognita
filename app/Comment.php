@@ -8,6 +8,8 @@ class Comment extends Model
 {
     protected $table = 'comments';
 
+    protected $fillable = ['nick', 'contents', 'date', 'news_id', 'reply_to'];
+
     /**
      * Get news item for comment.
      */

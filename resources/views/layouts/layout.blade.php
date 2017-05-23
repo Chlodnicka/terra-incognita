@@ -17,141 +17,95 @@
 </div>
 <!-- preloader end -->
 
-<!-- website -->
-<div id="wraperexpedition">
 
-    <!-- background -->
-    <!-- background -->
-    <div class="bgexpedition">
-        <div id="owl-slider-home" class="owl-carousel">
-            <div class="item">
-                <img alt="background" src="{{ asset('assets/img/bg-6.jpg') }}">
-                <div class="owl-slidertext">slide image 1/1</div>
-            </div>
-            <div class="item">
-                <img alt="background" src="{{ asset('assets/img/bg-3.jpg') }}">
-                <div class="owl-slidertext">slide image 1/2</div>
-            </div>
-            <div class="item">
-                <img alt="background" src="{{ asset('assets/img/bg-4.jpg') }}">
-                <div class="owl-slidertext">slide image 1/3</div>
-            </div>
-        </div>
-    </div>
-    <div class="bgcolor noselect" style="background-size: 100%; background-image:url('@yield('background')')"></div>
-
-
-    <!-- navigation -->
-    <!-- logo -->
-    <div id="logo" class="brand-expedition noselect animfadeInLeft" data-time="0">
-        <a href="/"><img alt="background" style="max-width: 150px" src="{{ asset('assets/img/logo.png') }}"></a>
-    </div>
-
-    <!-- menu navigation -->
-    <div id="nav-icon" class="animfadeInRight" data-time="150">
-        <div class="menu-line"></div>
-        <div class="menu-line1"></div>
-        <div class="menu-line2"></div>
-    </div>
-
-    <div class="overlay-menu"></div><!-- overlay block -->
-    <nav>
-        <div class="main-menu">
-            <ul id="nav-menu" class="effect-menu">
-                <li class="init-menu">
-                    <a class="menu-navigation active" data-hover="HOME">HOME</a>
-                </li>
-                <li class="init-menu">
-                    <a class="menu-navigation" href="/o-nas" data-hover="ABOUT US">O NAS</a>
-                    <ul>
-                        <li><a href="/my">MY</a></li>
-                        <li><a href="/w-mediach">W MEDIACH</a></li>
-                        <li><a href="/partnerzy-i-sponsorzy">PARTNERZY I SPONSORZY</a></li>
+<!-- navigation -->
+<!-- logo -->
+<div id="logo" class="brand-expedition noselect animfadeInLeft" data-time="0">
+    <a href="/"><img alt="background" style="max-width: 150px" src="{{ asset('assets/img/logo.png') }}"></a>
+</div>
+<!--header -->
+<header>
+    <div id="main-menu" class="menu-init intro">
+        <!-- mainmenu start -->
+        <nav>
+            <ul class="intro">
+                <li class="current-menu-item animfadeInRight intro" data-time="900"><a href="/" class="intro">Home</a></li>
+                <li class="animfadeInRight intro" data-time="1000"><a class="intro">O nas</a>
+                    <ul class="intro">
+                        <li class="intro"><a href="/my" class="intro">My</a></li>
+                        <li class="intro"><a href="/w-mediach" class="intro">W mediach</a></li>
+                        <li class="intro"><a href="/partnerzy-i-sponsorzy" class="intro">Partnerzy</a></li>
                     </ul>
                 </li>
-                <li class="init-menu">
-                    <a class="menu-navigation" data-hover="DISCOVER US" href="/wesprzyj-nas">WESPRZYJ NAS</a>
-                </li>
-                <li class="init-menu">
-                    <a class="menu-navigation" data-hover="DISCOVER US" href="/nasze-wyprawy">WYPRAWY</a>
-                </li>
-                <li class="init-menu">
-                    <a href="/aktualnosci" class="menu-navigation" data-hover="THE NEWS">AKTUALNOŚCI</a>
-                </li>
-                <li class="init-menu">
-                    <a class="menu-navigation" href="/kontakt" data-hover="CONTACT">KONTAKT</a>
-                </li>
+                <li class="animfadeInRight intro" data-time="1100"><a href="/wesprzyj-nas" class="intro">Wesprzyj nas</a></li>
+                <li class="animfadeInRight intro" data-time="1200"><a href="/wyprawy" class="intro">Wyprawy</a></li>
+                <li class="animfadeInRight intro" data-time="1300"><a href="/aktualnosci" class="intro">Aktualności</a></li>
+                <li class="animfadeInRight intro" data-time="1400"><a href="/kontakt" class="intro">Kontakt</a></li>
             </ul>
-        </div>
-        <div class="holdsidebar"></div>
-    </nav>
-    <!-- menu navigation end -->
+        </nav>
+        <!-- mainmenu end -->
+    </div>
+    <!-- navigation mobile -->
+    <div class="anim-nav intro" id="nav-icon">
+        <div class="menu-line intro"></div>
+        <div class="menu-line1 intro"></div>
+        <div class="menu-line2 intro"></div>
+    </div>
+    <!-- navigation mobile end -->
+</header>
+<!--header end -->
 
-
-    <!-- content home -->
 @yield('content')
 <!-- content home end -->
 
-    <!-- toggle gallery -->
-    <div class="nav-bottom">
-        <div id="opengal">
-            <i class="fa fa-angle-up"></i>
-            <span>Galeria video</span>
-        </div>
+<!-- toggle gallery -->
+<div class="nav-bottom">
+    <div id="opengal">
+        <i class="fa fa-angle-up"></i>
+        <span>Galeria video</span>
     </div>
-    <!-- toggle gallery end -->
+</div>
+<!-- toggle gallery end -->
 
-    <!-- gallery -->
-    <div class="bottom-option">
-        <!-- close gallery -->
-        <div class="nav-bottom-close">
-            <span>zamknij</span>
-            <i class="fa fa-angle-down"></i>
-        </div>
-        <!-- close gallery end -->
+<!-- gallery -->
+<div class="bottom-option">
+    <!-- close gallery -->
+    <div class="nav-bottom-close">
+        <span>zamknij</span>
+        <i class="fa fa-angle-down"></i>
+    </div>
+    <!-- close gallery end -->
 
-        <!-- main gallery -->
-        <div id="owl-gal" class="owl-carousel">
+    <!-- main gallery -->
+    <div id="owl-gal" class="owl-carousel">
 
-            @foreach($videos as $video)
-                <div class="item">
-                    <div class="port">
-                        <div class="hovereffect">
-                            <img class="gray-color" src="{{ $video->ico }}" alt="imageportofolio"/>
-                            <div class="overlay">
-                                <h2>{{ $video->title }}</h2>
-                                <a class="info big-video"
-                                   href="{{ $video->link_to_video }}">@if(!empty($video->lead)){{ $video->lead }}<br/>
-                                    <br/>@endif zobacz</a>
-                            </div>
+        @foreach($videos as $video)
+            <div class="item">
+                <div class="port">
+                    <div class="hovereffect">
+                        <img class="gray-color" src="{{ $video->ico }}" alt="imageportofolio"/>
+                        <div class="overlay">
+                            <h2>{{ $video->title }}</h2>
+                            <a class="info big-video"
+                               href="{{ $video->link_to_video }}">@if(!empty($video->lead)){{ $video->lead }}<br/>
+                                <br/>@endif zobacz</a>
                         </div>
                     </div>
                 </div>
-            @endforeach
-
-        </div>
-        <!-- main gallery end -->
-
+            </div>
+        @endforeach
 
     </div>
-    <!-- gallery end -->
+    <!-- main gallery end -->
 
-    <!-- footer -->
-    <div class="footer animfadeInRight" data-time="900">© All rights reserved. expedition 2017</div>
-    <div class="soc-icon animfadeInLeft" data-time="1200">
-        <a href="#"><i class="fa fa-facebook"></i></a>
-        <a href="#"><i class="fa fa-twitter"></i></a>
-        <a href="#"><i class="fa fa-youtube-play"></i></a>
-        <a href="#"><i class="fa fa-linkedin"></i></a>
-        <a href="#"><i class="fa fa-pinterest"></i></a>
-    </div>
-    <!-- footer end -->
 
 </div>
-<!-- website end -->
 
+
+<!-- Plugin JS -->
+<script src="plugin/pluginsexpedition.js" type="text/javascript"></script>
 <!-- expedition JS -->
-
+<script src="js/expedition.js" type="text/javascript"></script>
 @yield('js')
 <script src="{{ asset('assets/js/main.min.js') }}" type="text/javascript"></script>
 </body>

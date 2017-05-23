@@ -1,106 +1,108 @@
 /* all animation here */
 @-webkit-keyframes animbouncefall {
-    0% {
-        opacity: 0;
-        -webkit-transform: scale(1.3);
-        transform: scale(1.3)
-    }
-    70% {
-        opacity: 1;
-        -webkit-transform: scale(1);
-        transform: scale(1)
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: scale(1);
-        transform: scale(1)
-    }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3)
+  }
+  70% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1)
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1)
+  }
 }
 @keyframes animbouncefall {
-    0% {
-        opacity: 0;
-        -webkit-transform: scale(1.3);
-        -ms-transform: scale(1.3);
-        transform: scale(1.3)
-    }
-    70% {
-        opacity: 1;
-        -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-        transform: scale(1)
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-        transform: scale(1)
-    }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3)
+  }
+  70% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1)
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1)
+  }
 }
 .animbouncefall {
-    opacity: 1;
-    -webkit-animation-name: animbouncefall;
-    animation-name: animbouncefall;
-    -webkit-animation-duration: 1.5s;
-    animation-duration: 1.5s;
-    -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
-    animation-play-state: paused;
+  opacity: 1;
+  -webkit-animation-name: animbouncefall;
+  animation-name: animbouncefall;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+  animation-play-state: paused;
 }
 
 
 @-webkit-keyframes animfadebg {
-    0% {
-		-webkit-transform: scale(1.1);
-        transform: scale(1.1)
-        
-    }
-    50% {
-        -webkit-transform: scale(1);
-        transform: scale(1)
-    }
-	
-	100% {
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1)
-    }
+  0% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1)
+
+  }
+  50% {
+    -webkit-transform: scale(1);
+    transform: scale(1)
+  }
+
+  100% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1)
+  }
 }
 @keyframes animfadebg {
-    0% {
-		-webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1)
-        
-    }
+  0% {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1)
 
-    50% {
-        -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-        transform: scale(1)
-    }
-	
-	 100% {
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1)
-    }
+  }
+
+  50% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1)
+  }
+
+  100% {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1)
+  }
 }
 .animfadebg {
-    opacity: 1;
-    -webkit-animation-name: animfadebg ;
-    animation-name: animfadebg ;
-    -webkit-animation-duration: 20s;
-    animation-duration: 20s;
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-	-webkit-animation-delay: 2s;
-    animation-delay: 2s;
+  opacity: 1;
+  -webkit-animation-name: animfadebg ;
+  animation-name: animfadebg ;
+  -webkit-animation-duration: 30s;
+  animation-duration: 30s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-play-state: running; /* Chrome, Safari, Opera */
+  animation-play-state: running;
 }
 
 
@@ -173,14 +175,14 @@
   animation-name: animbounce;
   -webkit-transform-origin: center bottom;
   transform-origin: center bottom;
-   -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
-    animation-play-state: paused;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+  animation-play-state: paused;
 }
 
 @-webkit-keyframes animflash {
@@ -206,14 +208,14 @@
 .animflash {
   -webkit-animation-name: animflash;
   animation-name: animflash;
-   -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
-    animation-play-state: paused;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+  animation-play-state: paused;
 }
 
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
@@ -259,14 +261,14 @@
 .animpulse {
   -webkit-animation-name: animpulse;
   animation-name: animpulse;
-   -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
-    animation-play-state: paused;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+  animation-play-state: paused;
 }
 
 @-webkit-keyframes animrubberBand {
@@ -359,14 +361,14 @@
 .animrubberBand {
   -webkit-animation-name: animrubberBand;
   animation-name: animrubberBand;
-   -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
-    animation-play-state: paused;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+  animation-play-state: paused;
 }
 
 @-webkit-keyframes animshake {
@@ -412,14 +414,14 @@
 .animshake {
   -webkit-animation-name: animshake;
   animation-name: animshake;
-   -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
-    animation-play-state: paused;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+  animation-play-state: paused;
 }
 
 @-webkit-keyframes animheadshake {
@@ -503,14 +505,14 @@
   animation-timing-function: cubic-bezier(.165, .84, .44, 1)-in-out;
   -webkit-animation-name: animheadshake;
   animation-name: animheadshake;
-   -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
-    animation-play-state: paused;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+  animation-play-state: paused;
 }
 
 @-webkit-keyframes animswing {
@@ -580,14 +582,14 @@
   transform-origin: top center;
   -webkit-animation-name: animswing;
   animation-name: animswing;
-   -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
-    animation-play-state: paused;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+  animation-play-state: paused;
 }
 
 @-webkit-keyframes animtada {
@@ -655,14 +657,14 @@
 .animtada {
   -webkit-animation-name: animtada;
   animation-name: animtada;
-   -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
-    animation-play-state: paused;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+  animation-play-state: paused;
 }
 
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
@@ -756,14 +758,14 @@
 .animwobble {
   -webkit-animation-name: animwobble;
   animation-name: animwobble;
-   -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
-    animation-play-state: paused;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+  animation-play-state: paused;
 }
 
 @-webkit-keyframes animjello {
@@ -871,14 +873,14 @@
   animation-name: animjello;
   -webkit-transform-origin: center;
   transform-origin: center;
-   -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
-    animation-play-state: paused;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+  animation-play-state: paused;
 }
 
 @-webkit-keyframes animbounceIn {
@@ -964,14 +966,14 @@
 .animbounceIn {
   -webkit-animation-name: animbounceIn;
   animation-name: animbounceIn;
-   -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
-    animation-play-state: paused;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+  animation-play-state: paused;
 }
 
 @-webkit-keyframes animbounceInDown {
@@ -993,13 +995,13 @@
   }
 
   75% {
-      opacity: 1;
+    opacity: 1;
     -webkit-transform: translate3d(0, -10px, 0);
     transform: translate3d(0, -10px, 0);
   }
 
   90%, 100% {
-      opacity: 1;
+    opacity: 1;
     -webkit-transform: translate3d(0, 5px, 0);
     transform: translate3d(0, 5px, 0);
   }
@@ -1029,13 +1031,13 @@
   }
 
   75% {
-      opacity: 1;
+    opacity: 1;
     -webkit-transform: translate3d(0, -10px, 0);
     transform: translate3d(0, -10px, 0);
   }
 
   90%, 100% {
-      opacity: 1;
+    opacity: 1;
     -webkit-transform: translate3d(0, 5px, 0);
     transform: translate3d(0, 5px, 0);
   }
@@ -1049,14 +1051,14 @@
 .animbounceInDown {
   -webkit-animation-name: animbounceInDown;
   animation-name: animbounceInDown;
-   -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
-    animation-play-state: paused;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+  animation-play-state: paused;
 }
 
 @-webkit-keyframes animbounceInLeft {
@@ -1078,13 +1080,13 @@
   }
 
   75% {
-      opacity: 1;
+    opacity: 1;
     -webkit-transform: translate3d(-10px, 0, 0);
     transform: translate3d(-10px, 0, 0);
   }
 
   90%, 100% {
-      opacity: 1;
+    opacity: 1;
     -webkit-transform: translate3d(5px, 0, 0);
     transform: translate3d(5px, 0, 0);
   }
@@ -1114,13 +1116,13 @@
   }
 
   75% {
-      opacity: 1;
+    opacity: 1;
     -webkit-transform: translate3d(-10px, 0, 0);
     transform: translate3d(-10px, 0, 0);
   }
 
   90%, 100% {
-      opacity: 1;
+    opacity: 1;
     -webkit-transform: translate3d(5px, 0, 0);
     transform: translate3d(5px, 0, 0);
   }
@@ -1134,14 +1136,14 @@
 .animbounceInLeft {
   -webkit-animation-name: animbounceInLeft;
   animation-name: animbounceInLeft;
-   -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
-    animation-play-state: paused;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+  animation-play-state: paused;
 }
 
 @-webkit-keyframes animbounceInRight {
@@ -1163,13 +1165,13 @@
   }
 
   75% {
-      opacity: 1;
+    opacity: 1;
     -webkit-transform: translate3d(10px, 0, 0);
     transform: translate3d(10px, 0, 0);
   }
 
   90%, 100% {
-      opacity: 1;
+    opacity: 1;
     -webkit-transform: translate3d(-5px, 0, 0);
     transform: translate3d(-5px, 0, 0);
   }
@@ -1199,13 +1201,13 @@
   }
 
   75% {
-      opacity: 1;
+    opacity: 1;
     -webkit-transform: translate3d(10px, 0, 0);
     transform: translate3d(10px, 0, 0);
   }
 
   90%, 100% {
-      opacity: 1;
+    opacity: 1;
     -webkit-transform: translate3d(-5px, 0, 0);
     transform: translate3d(-5px, 0, 0);
   }
@@ -1219,14 +1221,14 @@
 .animbounceInRight {
   -webkit-animation-name: animbounceInRight;
   animation-name: animbounceInRight;
-   -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
-    animation-play-state: paused;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+  animation-play-state: paused;
 }
 
 @-webkit-keyframes animbounceInUp {
@@ -1248,13 +1250,13 @@
   }
 
   75% {
-      opacity: 1;
+    opacity: 1;
     -webkit-transform: translate3d(0, 10px, 0);
     transform: translate3d(0, 10px, 0);
   }
 
   90%, 100% {
-      opacity: 1;
+    opacity: 1;
     -webkit-transform: translate3d(0, -5px, 0);
     transform: translate3d(0, -5px, 0);
   }
@@ -1284,13 +1286,13 @@
   }
 
   75% {
-      opacity: 1;
+    opacity: 1;
     -webkit-transform: translate3d(0, 10px, 0);
     transform: translate3d(0, 10px, 0);
   }
 
   90%, 100% {
-      opacity: 1;
+    opacity: 1;
     -webkit-transform: translate3d(0, -5px, 0);
     transform: translate3d(0, -5px, 0);
   }
@@ -1304,14 +1306,14 @@
 .animbounceInUp {
   -webkit-animation-name: animbounceInUp;
   animation-name: animbounceInUp;
-   -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
-    animation-play-state: paused;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+  animation-play-state: paused;
 }
 
 @-webkit-keyframes animfadeIn {
@@ -1337,14 +1339,14 @@
 .animfadeIn {
   -webkit-animation-name: animfadeIn;
   animation-name: animfadeIn;
-   -webkit-animation-duration: 2s;
-    animation-duration: 2s;
-    -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
-    animation-play-state: paused;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+  animation-play-state: paused;
 }
 
 @-webkit-keyframes animfadeInDown {
@@ -1378,14 +1380,14 @@
 .animfadeInDown {
   -webkit-animation-name: animfadeInDown;
   animation-name: animfadeInDown;
-   -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
-    animation-play-state: paused;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+  animation-play-state: paused;
 }
 
 @-webkit-keyframes animfadeInDownBig {
@@ -1419,14 +1421,14 @@
 .animfadeInDownBig {
   -webkit-animation-name: animfadeInDownBig;
   animation-name: animfadeInDownBig;
-   -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
-    animation-play-state: paused;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+  animation-play-state: paused;
 }
 
 @-webkit-keyframes animfadeInLeft {
@@ -1460,14 +1462,14 @@
 .animfadeInLeft {
   -webkit-animation-name: animfadeInLeft;
   animation-name: animfadeInLeft;
-   -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
-    animation-play-state: paused;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+  animation-play-state: paused;
 }
 
 @-webkit-keyframes animfadeInLeftBig {
@@ -1501,14 +1503,14 @@
 .animfadeInLeftBig {
   -webkit-animation-name: animfadeInLeftBig;
   animation-name: animfadeInLeftBig;
-   -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
-    animation-play-state: paused;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+  animation-play-state: paused;
 }
 
 @-webkit-keyframes animfadeInRight {
@@ -1542,14 +1544,14 @@
 .animfadeInRight {
   -webkit-animation-name: animfadeInRight;
   animation-name: animfadeInRight;
-   -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
-    animation-play-state: paused;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+  animation-play-state: paused;
 }
 
 @-webkit-keyframes animfadeInRightBig {
@@ -1583,14 +1585,14 @@
 .animfadeInRightBig {
   -webkit-animation-name: animfadeInRightBig;
   animation-name: animfadeInRightBig;
-   -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
-    animation-play-state: paused;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+  animation-play-state: paused;
 }
 
 @-webkit-keyframes animfadeInUp {
@@ -1624,14 +1626,102 @@
 .animfadeInUp {
   -webkit-animation-name: animfadeInUp;
   animation-name: animfadeInUp;
-   -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
-    animation-play-state: paused;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+  animation-play-state: paused;
+}
+
+@-webkit-keyframes animfadeInfly {
+  0% {
+    -webkit-transform: translate3d(0, 5%, 0);
+    transform: translate3d(0, 5%, 0);
+
+  }
+  50% {
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 5%, 0);
+    transform: translate3d(0, 5%, 0);
+  }
+}
+
+@keyframes animfadeInfly {
+  0% {
+    -webkit-transform: translate3d(0, 5%, 0);
+    transform: translate3d(0, 5%, 0);
+
+  }
+  50% {
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 5%, 0);
+    transform: translate3d(0, 5%, 0);
+  }
+}
+
+.animfadeInfly {
+  -webkit-animation-name: animfadeInfly;
+  animation-name: animfadeInfly;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes animfadeInUpmenu {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10%, 0);
+    transform: translate3d(0, 10%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes animfadeInUpmenu {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10%, 0);
+    transform: translate3d(0, 10%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.animfadeInUpmenu {
+  -webkit-animation-name: animfadeInUpmenu;
+  animation-name: animfadeInUpmenu;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+  animation-play-state: paused;
 }
 
 @-webkit-keyframes animfadeInUpBig {
@@ -1665,14 +1755,14 @@
 .animfadeInUpBig {
   -webkit-animation-name: animfadeInUpBig;
   animation-name: animfadeInUpBig;
-   -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
-    animation-play-state: paused;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+  animation-play-state: paused;
 }
 
 @-webkit-keyframes animflip {
@@ -1753,19 +1843,19 @@
 }
 
 .intro.animflip {
-    opacity:1;
+  opacity:1;
   -webkit-backface-visibility: visible;
   backface-visibility: visible;
   -webkit-animation-name: animflip;
   animation-name: animflip;
-   -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
-    animation-play-state: paused;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+  animation-play-state: paused;
 }
 
 @-webkit-keyframes animflipInX {
@@ -1795,7 +1885,7 @@
     transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
     opacity: 1;
   }
-   100% {
+  100% {
     -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
     transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
     opacity: 1;
@@ -1849,19 +1939,19 @@
 }
 
 .animflipInX {
-    opacity:1;
+  opacity:1;
   -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
   -webkit-animation-name: animflipInX;
   animation-name: animflipInX;
-   -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
-    animation-play-state: paused;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+  animation-play-state: paused;
 }
 
 @-webkit-keyframes animflipInY {
@@ -1891,7 +1981,7 @@
     transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
     opacity: 1;
   }
-   100% {
+  100% {
     -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
     transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
     opacity: 1;
@@ -1931,7 +2021,7 @@
     transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
     opacity: 1;
   }
-   100% {
+  100% {
     -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
     transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
     opacity: 1;
@@ -1945,19 +2035,19 @@
 }
 
 .animflipInY {
-    opacity:1;
+  opacity:1;
   -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
   -webkit-animation-name: animflipInY;
   animation-name: animflipInY;
-   -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
-    animation-play-state: paused;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+  animation-play-state: paused;
 }
 
 @-webkit-keyframes animlightSpeedIn {
@@ -2024,17 +2114,17 @@
 }
 
 .animlightSpeedIn {
-    opacity:1;
+  opacity:1;
   -webkit-animation-name: animlightSpeedIn;
   animation-name: animlightSpeedIn;
-   -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
-    animation-play-state: paused;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+  animation-play-state: paused;
 }
 
 @-webkit-keyframes animrotateIn {
@@ -2074,17 +2164,17 @@
 }
 
 .animrotateIn {
-    opacity:1;
+  opacity:1;
   -webkit-animation-name: animrotateIn;
   animation-name: animrotateIn;
-   -webkit-animation-duration: 0.5s;
-    animation-duration: 0.5s;
-    -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
-    animation-play-state: paused;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+  animation-play-state: paused;
 }
 
 
@@ -2157,17 +2247,17 @@
 }
 
 .animhinge {
-    opacity:1;
+  opacity:1;
   -webkit-animation-name: animhinge;
   animation-name: animhinge;
-   -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
-    animation-play-state: paused;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+  animation-play-state: paused;
 }
 
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
@@ -2201,17 +2291,17 @@
 }
 
 .animrollIn {
-    opacity:1;
+  opacity:1;
   -webkit-animation-name: animrollIn;
   animation-name: animrollIn;
-   -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
-    animation-play-state: paused;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+  animation-play-state: paused;
 }
 
 
@@ -2242,18 +2332,18 @@
 .zoomIn {
   -webkit-animation-name: zoomIn;
   animation-name: zoomIn;
-   -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    animation-timing-function: cubic-bezier(.165, .84, .44, 1);
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
-    animation-play-state: paused;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+  animation-play-state: paused;
 }
 
 @-webkit-keyframes fadeOutLeft {
-    from {
+  from {
     opacity: 1;
     -webkit-transform: none;
     transform: none;
@@ -2261,12 +2351,12 @@
 
   to {
     opacity: 0.5;
-	-webkit-transform: translate3d(-100%, 0, 0);
+    -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
   }
 }
 @keyframes fadeOutLeft {
-    from {
+  from {
     opacity: 1;
     -webkit-transform: none;
     transform: none;
@@ -2274,24 +2364,24 @@
 
   to {
     opacity: 0.5;
-	-webkit-transform: translate3d(-100%, 0, 0);
+    -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
   }
 }
 .fadeOutLeft {
-    opacity: 0.5;
-    -webkit-animation-name: fadeOutLeft;
-    animation-name: fadeOutLeft;
-    -webkit-animation-duration:1.5s;
-    animation-duration:1.5s;
-    -webkit-animation-timing-function:cubic-bezier(.165,.84,.44,1);
-    animation-timing-function:cubic-bezier(.165,.84,.44,1);
-     -webkit-animation-fill-mode: both;
-     animation-fill-mode: both;
+  opacity: 0.5;
+  -webkit-animation-name: fadeOutLeft;
+  animation-name: fadeOutLeft;
+  -webkit-animation-duration:1.5s;
+  animation-duration:1.5s;
+  -webkit-animation-timing-function:cubic-bezier(.165,.84,.44,1);
+  animation-timing-function:cubic-bezier(.165,.84,.44,1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 @-webkit-keyframes fadeOutRight {
-    from {
+  from {
     opacity: 1;
     -webkit-transform: none;
     transform: none;
@@ -2299,12 +2389,12 @@
 
   to {
     opacity: 0.5;
-	-webkit-transform: translate3d(100%, 0, 0);
+    -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0);
   }
 }
 @keyframes fadeOutRight {
-    from {
+  from {
     opacity: 1;
     -webkit-transform: none;
     transform: none;
@@ -2312,85 +2402,83 @@
 
   to {
     opacity: 0.5;
-	-webkit-transform: translate3d(100%, 0, 0);
+    -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0);
   }
 }
 .fadeOutRight {
-    opacity: 0.5;
-    -webkit-animation-name: fadeOutRight;
-    animation-name: fadeOutRight;
-    -webkit-animation-duration:1.5s;
-    animation-duration:1.5s;
-    -webkit-animation-timing-function:cubic-bezier(.165,.84,.44,1);
-    animation-timing-function:cubic-bezier(.165,.84,.44,1);
-     -webkit-animation-fill-mode: both;
-     animation-fill-mode: both;
+  opacity: 0.5;
+  -webkit-animation-name: fadeOutRight;
+  animation-name: fadeOutRight;
+  -webkit-animation-duration:1.5s;
+  animation-duration:1.5s;
+  -webkit-animation-timing-function:cubic-bezier(.165,.84,.44,1);
+  animation-timing-function:cubic-bezier(.165,.84,.44,1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 @-webkit-keyframes fadeOutDown {
-    from {
+  from {
     -webkit-transform: none;
     transform: none;
   }
 
   to {
-	-webkit-transform: translate3d(0, 100%, 0);
+    -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
   }
 }
 @keyframes fadeOutDown {
-    from {
+  from {
     -webkit-transform: none;
     transform: none;
   }
 
   to {
-	-webkit-transform: translate3d(0, 100%, 0);
+    -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
   }
 }
 .fadeOutDown {
-    -webkit-animation-name: fadeOutDown;
-    animation-name: fadeOutDown;
-    -webkit-animation-duration:.5s;
-    animation-duration:.5s;
-    -webkit-animation-timing-function:cubic-bezier(.165,.84,.44,1);
-    animation-timing-function:cubic-bezier(.165,.84,.44,1);
-     -webkit-animation-fill-mode: both;
-     animation-fill-mode: both;
+  -webkit-animation-name: fadeOutDown;
+  animation-name: fadeOutDown;
+  -webkit-animation-duration:.5s;
+  animation-duration:.5s;
+  -webkit-animation-timing-function:cubic-bezier(.165,.84,.44,1);
+  animation-timing-function:cubic-bezier(.165,.84,.44,1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 
 @-webkit-keyframes fadeOut {
-    0% {
-        opacity: 1
-    }
-    100% {
-        opacity: 0
-    }
+  0% {
+    opacity: 1
+  }
+  100% {
+    opacity: 0
+  }
 }
 @keyframes fadeOut {
-    0% {
-        opacity: 1
-    }
-    100% {
-        opacity: 0
-    }
+  0% {
+    opacity: 1
+  }
+  100% {
+    opacity: 0
+  }
 }
 .fadeOut {
-    opacity: 0;
-    -webkit-animation-name: fadeOut;
-    animation-name: fadeOut;
-    -webkit-animation-duration:1.5s;
-    animation-duration:1.5s;
-    -webkit-animation-timing-function:cubic-bezier(.165,.84,.44,1);
-    animation-timing-function:cubic-bezier(.165,.84,.44,1);
-     -webkit-animation-fill-mode: both;
-     animation-fill-mode: both;
+  opacity: 0;
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+  -webkit-animation-duration:1.5s;
+  animation-duration:1.5s;
+  -webkit-animation-timing-function:cubic-bezier(.165,.84,.44,1);
+  animation-timing-function:cubic-bezier(.165,.84,.44,1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 .intro{-webkit-animation-play-state: running!important; /* Chrome, Safari, Opera */
-       animation-play-state: running!important;
+  animation-play-state: running!important;
 }
-    
-    

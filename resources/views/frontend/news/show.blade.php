@@ -23,8 +23,25 @@
                 <div class="text">{!! $item->text !!}</div>
             </div>
 
-            <div class="btn-content spaceup spacedown animfadeInUp" data-time="1200"  role="button"><a class=" link-class" href="/aktualnosci">WRÓĆ</a></div>
+            <div class="btn-content spaceup spacedown animfadeInUp" data-time="1200" role="button"><a
+                        class=" link-class" href="/aktualnosci">WRÓĆ</a></div>
 
+            <div class="comments">
+                <form method="post" action="/aktualnosci/dodaj_komentarz/{{ $item->id }}">
+                    {!! csrf_field() !!}
+                    <input type="hidden" name="news_id" value="{{ $item->id }}">
+                    <input type="text" name="nick" placeholder="Twój nick"/>
+                    <textarea name="contents" placeholder="Twój komentarz"></textarea>
+                    <button type="submit">Wyślij</button>
+                </form>
+                @foreach($item->comments as $comment)
+                    <div class="comment">
+                        <p class="name">{{ $comment->nick }}</p>
+                        <p class="date">{{ $comment->date }}</p>
+                        <p class="content">{{ $comment->contents }}</p>
+                    </div>
+                @endforeach
+            </div>
             <!-- News end -->
         </div><!-- row end -->
     </div>

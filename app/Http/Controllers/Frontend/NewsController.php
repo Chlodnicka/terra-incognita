@@ -8,6 +8,7 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\News;
+use App\Comment;
 
 class NewsController extends BaseController
 {
@@ -32,5 +33,18 @@ class NewsController extends BaseController
         return view('frontend.news.show', ['item' => $news, 'background' => $this->background]);
     }
 
+    public function addComment($id)
+    {
+        $comment = new Comment();
+        $comment->fill(request()->all());
+        $comment->date = date('Y-m-d h:i:s', time());
+        if ($comment->save()) {
+            request()->session()->flash('alert_success', 'Dane zostały zapisane');
+        } else {
+            request()->session()->flash('alert_success', 'Błąd zapisu danych. Spróbuj jeszcze raz.');
+        }
+
+        return redirect('/aktualnosci/' . $id);
+    }
 
 }

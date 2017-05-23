@@ -32,12 +32,13 @@
                                 <div role="tabpanel" class="tab-pane active fade in" id="{{ $section->type }}"
                                      aria-labelledby="profile-tab">
                                     <form class="form-horizontal form-label-left"
-                                          action="expedition_section/{{$section->id}}" method="post"
+                                          action="/expedition/section/{{$section->id}}" method="post"
                                           enctype="multipart/form-data">
+                                        {!! csrf_field() !!}
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12">Tytuł</label>
                                             <div class="col-md-9 col-sm-9 col-xs-12">
-                                                <input type="text" class="form-control" name="lead" id="lead"
+                                                <input type="text" class="form-control" name="title" id="lead"
                                                        value="{{ $section->title }}">
                                             </div>
                                         </div>
@@ -72,6 +73,13 @@
                                             <div class="col-md-9 col-sm-9 col-xs-12">
                                 <textarea class="form-control" name="text" id="text"
                                           rows="3">{!! $section->text !!}</textarea>
+                                            </div>
+                                        </div>
+                                        <div class="ln_solid"></div>
+                                        <div class="form-group">
+                                            <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+                                                <a href="/partners" class="btn btn-primary">Anuluj</a>
+                                                <input type="submit" class="btn btn-success" value="Wyślij"/>
                                             </div>
                                         </div>
                                     </form>

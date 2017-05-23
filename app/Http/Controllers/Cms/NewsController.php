@@ -12,6 +12,7 @@ use App\Http\Requests\UpdateNewsItem as Update;
 use App\Http\Requests\CreateNewsItem as Create;
 use App\News;
 
+
 class NewsController extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
