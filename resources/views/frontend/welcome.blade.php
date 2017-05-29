@@ -16,7 +16,7 @@
                         <div class="main-text">challenge your life</div>
                     </div>-->
 
-                <div class="btn-home animfadeInLeft" data-time="2100"><a class="link-class" href="/wyprawy">WYPRAWY</a>
+                <div class="btn-home animfadeInLeft" data-time="2100"><a class="link-class" href="/wyprawy/{{ $main_expedition->id }}">{{ $main_expedition->title }}</a>
                 </div>
                 <div class="btn-home animfadeInLeft" data-time="2100"><a class="link-class" href="/o-nas">O NAS</a>
                 </div>

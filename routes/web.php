@@ -23,6 +23,7 @@ Route::post('aktualnosci/dodaj_komentarz/{id}', 'Frontend\NewsController@addComm
 Route::get('aktualnosci/{id}', 'Frontend\NewsController@show')->name('news.show');
 Route::get('aktualnosci/{id}/', 'Frontend\NewsController@show');
 
+Route::get('/galeria-video', 'Frontend\VideoController@index');
 
 Route::get('my', 'Frontend\ContentController@we')->name('content.we');
 Route::get('w-mediach', 'Frontend\ContentController@media')->name('media.index');

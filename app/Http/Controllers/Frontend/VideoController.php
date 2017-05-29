@@ -2,25 +2,23 @@
 
 namespace App\Http\Controllers\Frontend;
 
-use App\Expedition;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use Illuminate\Http\Request;
+use App\Background;
+use App\Video;
 
-class HomeController extends BaseController
+
+class VideoController extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        $mainExpedition = Expedition::where('is_main_expedition', 1)->first();
-        return view('frontend.welcome', ['main_expedition' => $mainExpedition]);
+        $videos = Video::all();
+        $background = Background::findOrFail(5);
+        return view('frontend.video.index', ['videos' => $videos, 'background' => $background]);
     }
+
 }

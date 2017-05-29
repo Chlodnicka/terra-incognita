@@ -11,11 +11,26 @@
 </head>
 <body>
 
+
 <!-- preloader -->
 <div class="preloader">
     <div class="mainpreloader"><span></span></div>
 </div>
 <!-- preloader end -->
+
+<!-- website -->
+<div id="wraperexpedition">
+
+    <!-- background -->
+    <div class="bgexpedition">
+
+        <div id="owl-slider-home" class="owl-carousel">
+            <div class="item imgbg" style="background-image:url('{{ asset('assets/images/cropper.jpg') }}')"></div>
+        </div>
+    </div>
+
+</div>
+<div class="overlay-home noselect" style="background-image:url('{{ asset('assets/images/cropper.jpg') }}')"><div class="layer"></div> </div>
 
 
 <!-- navigation -->
@@ -29,18 +44,12 @@
         <!-- mainmenu start -->
         <nav>
             <ul class="intro">
-                <li class="current-menu-item animfadeInRight intro" data-time="900"><a href="/" class="intro">Home</a></li>
-                <li class="animfadeInRight intro" data-time="1000"><a class="intro">O nas</a>
-                    <ul class="intro">
-                        <li class="intro"><a href="/my" class="intro">My</a></li>
-                        <li class="intro"><a href="/w-mediach" class="intro">W mediach</a></li>
-                        <li class="intro"><a href="/partnerzy-i-sponsorzy" class="intro">Partnerzy</a></li>
-                    </ul>
-                </li>
-                <li class="animfadeInRight intro" data-time="1100"><a href="/wesprzyj-nas" class="intro">Wesprzyj nas</a></li>
-                <li class="animfadeInRight intro" data-time="1200"><a href="/wyprawy" class="intro">Wyprawy</a></li>
-                <li class="animfadeInRight intro" data-time="1300"><a href="/aktualnosci" class="intro">Aktualności</a></li>
-                <li class="animfadeInRight intro" data-time="1400"><a href="/kontakt" class="intro">Kontakt</a></li>
+                <li class="current-menu-item animfadeInRight intro" data-time="1000"><a href="/w-mediach" class="intro">W mediach</a></li>
+                <li class="current-menu-item animfadeInRight intro" data-time="1100"><a href="/partnerzy-i-sponsorzy" class="intro">Partnerzy</a></li>
+                <li class="current-menu-item animfadeInRight intro" data-time="1200"><a href="/galeria-video" class="intro">Galeria video</a></li>
+                <li class="animfadeInRight intro" data-time="1300"><a href="/wesprzyj-nas" class="intro">Wesprzyj nas</a></li>
+                <li class="animfadeInRight intro" data-time="1400"><a href="/wyprawy" class="intro">Wyprawy</a></li>
+                <li class="animfadeInRight intro" data-time="1500"><a href="/kontakt" class="intro">Kontakt</a></li>
             </ul>
         </nav>
         <!-- mainmenu end -->
@@ -54,59 +63,23 @@
     <!-- navigation mobile end -->
 </header>
 <!--header end -->
+<div class="nav-top-block intro"></div>
 
 @yield('content')
 <!-- content home end -->
 
-<!-- toggle gallery -->
-<div class="nav-bottom">
-    <div id="opengal">
-        <i class="fa fa-angle-up"></i>
-        <span>Galeria video</span>
+
+    <div class="soc-icon animfadeInLeft intro" data-time="1200">
+        <a href="https://www.facebook.com/TerraIncognitaProject/" target="_blank" class="intro"><i class="fa fa-facebook intro"></i></a>
+        <a href="https://www.instagram.com/terraincognitaprojekt/" target="_blank" class="intro"><i class="fa fa-instagram intro"></i></a>
+        <a href="https://www.youtube.com/channel/UCVxSyzSwI5hfDKmTguAUVjw" target="_blank" class="intro"><i class="fa fa-youtube-play intro"></i></a>
     </div>
-</div>
-<!-- toggle gallery end -->
-
-<!-- gallery -->
-<div class="bottom-option">
-    <!-- close gallery -->
-    <div class="nav-bottom-close">
-        <span>zamknij</span>
-        <i class="fa fa-angle-down"></i>
-    </div>
-    <!-- close gallery end -->
-
-    <!-- main gallery -->
-    <div id="owl-gal" class="owl-carousel">
-
-        @foreach($videos as $video)
-            <div class="item">
-                <div class="port">
-                    <div class="hovereffect">
-                        <img class="gray-color" src="{{ $video->ico }}" alt="imageportofolio"/>
-                        <div class="overlay">
-                            <h2>{{ $video->title }}</h2>
-                            <a class="info big-video"
-                               href="{{ $video->link_to_video }}">@if(!empty($video->lead)){{ $video->lead }}<br/>
-                                <br/>@endif zobacz</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        @endforeach
-
-    </div>
-    <!-- main gallery end -->
-
-
-</div>
 
 
 <!-- Plugin JS -->
-<script src="plugin/pluginsexpedition.js" type="text/javascript"></script>
+<script src="{{ asset('assets/js/pluginsexpedition.js') }}" type="text/javascript"></script>
 <!-- expedition JS -->
-<script src="js/expedition.js" type="text/javascript"></script>
-@yield('js')
-<script src="{{ asset('assets/js/main.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('assets/js/expedition.js') }}" type="text/javascript"></script>
+
 </body>
 </html>
