@@ -12,7 +12,7 @@
 */
 Route::group(['domain' => 'terraprojekt.com.pl'], function () {
 
-Route::get('/home', 'Frontend\HomeController@index')->name('home');
+Route::get('/', 'Frontend\HomeController@index')->name('home');
 
 
 Route::get('aktualnosci/index', 'Frontend\NewsController@index');
@@ -38,6 +38,7 @@ Route::get('wyprawy/', 'Frontend\ExpeditionController@index');
 Route::get('wyprawa/sekcja/{id}', 'Frontend\ExpeditionSectionsController@show');
 Route::get('wyprawy/{id}', 'Frontend\ExpeditionController@show')->name('venture.show');
 Route::get('wyprawy/{id}/', 'Frontend\ExpeditionController@show');
+});
 
 Route::group(['domain' => 'cms.terraprojekt.com.pl'], function () {
 Auth::routes();
@@ -98,6 +99,3 @@ Route::post('/media', 'Cms\ContentController@mediaUpdate')->name('media.update')
 Route::get('/', 'Cms\CmsController@index')->name('dashboard');
 
 });
-
-
-

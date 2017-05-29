@@ -24,9 +24,9 @@ return [
     */
 
     // If true, private folders will be created for each signed-in user.
-    'allow_multi_user' => true,
+    'allow_multi_user' => false,
     // If true, share folder will be created when allow_multi_user is true.
-    'allow_share_folder' => true,
+    'allow_share_folder' => tru,
 
     // Flexibla way to customize client folders accessibility
     // Ex: The private folder of user will be named as the user id.
@@ -150,16 +150,4 @@ return [
         'ppt'  => 'fa-file-powerpoint-o',
         'pptx' => 'fa-file-powerpoint-o',
     ],
-
-    /*
-    |--------------------------------------------------------------------------
-    | php.ini override
-    |--------------------------------------------------------------------------
-    */
-    // These values override your php.ini settings before uploading files
-    // Set these to false to ingnore and apply your php.ini settings
-    'php_ini_overrides' => [
-        'memory_limit'        => '256M'
-    ]
-
 ];
