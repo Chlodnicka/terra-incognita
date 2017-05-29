@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\Background;
 use App\Content;
 use App\Mail;
+use Mail as Mailing;
 
 class ContentController extends BaseController
 {
@@ -49,7 +50,17 @@ class ContentController extends BaseController
         $mail = new Mail;
         $mail->fill(request()->all());
         if ($mail->save()) {
-            //wyslij mail
+            $data = array(
+                'name' => $mail->name,
+                'email' => $mail->email,
+                'content' => $mail->content
+            );
+            //kontakt@terraprojekt.com.pl
+
+            Mailing::send('emails.message', $data, function ($message) use ($data) {
+                $message->from($data['email'], 'Terra Incognita');
+                $message->to('maja.chlodnicka@gmail.com')->subject('TerraIncognita - mail ze strony');
+            });
             return redirect('/kontakt?send=1');
         } else {
             return redirect('/kontakt?send=-1');

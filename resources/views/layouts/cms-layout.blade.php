@@ -26,6 +26,9 @@
     <!-- bootstrap-daterangepicker -->
     <link href="{!! asset('assets/vendors/bootstrap-daterangepicker/daterangepicker.css') !!}" rel="stylesheet">
 
+    <link rel="stylesheet" type="text/css" href="{!! asset('/assets/css/jquery.datetimepicker.css') !!}"/>
+
+
     <!-- Custom Theme Style -->
     <link href="{!! asset('assets/build/css/custom.min.css') !!}" rel="stylesheet">
 
@@ -276,6 +279,7 @@
 <script src="{!! asset('assets/vendors/moment/min/moment.min.js') !!}"></script>
 <script src="{!! asset('assets/vendors/bootstrap-daterangepicker/daterangepicker.js') !!}"></script>
 <script src="{!! asset('https://code.jquery.com/ui/1.12.1/jquery-ui.js') !!}"></script>
+<script src="{!! asset('assets/build/jquery.datetimepicker.full.js') !!}"></script>
 
 <script src="{!! asset('assets/vendors/tinymce/tinymce.min.js') !!}"></script>
 <script>
@@ -325,7 +329,9 @@
     var domain = "";
     $('#lfm').filemanager('image', {prefix: domain});
 
-    console.log($('#lfm'));
+    $('.datepicker').datetimepicker({
+        format:'Y-m-d h:i:s'
+    });
 </script>
 
 </body>

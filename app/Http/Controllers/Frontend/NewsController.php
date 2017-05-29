@@ -23,7 +23,7 @@ class NewsController extends BaseController
 
     public function index()
     {
-        $news = News::all();
+        $news = News::latest()->get();
         return view('frontend.news.index', ['news' => $news, 'background' => $this->background]);
     }
 

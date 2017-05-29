@@ -8,7 +8,7 @@ class Expedition extends Model
 {
 
     // protected $table = 'contents';
-    protected $fillable = ['title', 'ico', 'text', 'link_to_video', 'date', 'lead'];
+    protected $fillable = ['title', 'ico', 'text', 'link_to_video', 'date', 'lead', 'is_main_expedition'];
 
     /**
      * Get gallery items for content
@@ -21,6 +21,11 @@ class Expedition extends Model
     public function sections()
     {
         return $this->hasMany('App\ExpeditionSection');
+    }
+
+    public function dailyBlog()
+    {
+        return $this->hasMany('App\DailyBlog');
     }
 
 

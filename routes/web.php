@@ -23,6 +23,7 @@ Route::post('aktualnosci/dodaj_komentarz/{id}', 'Frontend\NewsController@addComm
 Route::get('aktualnosci/{id}', 'Frontend\NewsController@show')->name('news.show');
 Route::get('aktualnosci/{id}/', 'Frontend\NewsController@show');
 
+Route::get('/galeria-video', 'Frontend\VideoController@index');
 
 Route::get('my', 'Frontend\ContentController@we')->name('content.we');
 Route::get('w-mediach', 'Frontend\ContentController@media')->name('media.index');
@@ -78,6 +79,9 @@ Route::get('/expedition/{id}', 'Cms\ExpeditionController@edit')->name('expeditio
 Route::post('/expedition/{id}', 'Cms\ExpeditionController@update')->name('expeditions.update');
 Route::get('/expedition/{id}/', 'Cms\ExpeditionController@edit');
 
+Route::get('/daily_blog/add/{id}', 'Cms\DailyBlogController@add');
+Route::get('/daily_blog/edit/{id}/', 'Cms\DailyBlogController@edit');
+Route::get('/daily_blog/{id}/', 'Cms\DailyBlogController@index');
 
 Route::post('/backgrounds/{id}', 'Cms\BackgroundController@update')->name('background.update');
 

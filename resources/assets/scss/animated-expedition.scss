@@ -2482,3 +2482,17 @@
 .intro{-webkit-animation-play-state: running!important; /* Chrome, Safari, Opera */
   animation-play-state: running!important;
 }
+
+.soc-icon {
+  position: fixed;
+  display: block;
+  height: auto;
+  left: 40px;
+  bottom: 10px;
+  overflow: hidden;
+  font-size: 24px;
+  z-index: 1;
+  a {
+    margin-right:10px;
+  }
+}
