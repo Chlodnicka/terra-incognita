@@ -25,12 +25,12 @@
     <div class="bgexpedition">
 
         <div id="owl-slider-home" class="owl-carousel">
-            <div class="item imgbg" style="background-image:url('{{ asset('assets/images/cropper.jpg') }}')"></div>
+            <div class="item imgbg" style="background-size: 100%; background-image:url('@yield('background')')"></div>
         </div>
     </div>
 
 </div>
-<div class="overlay-home noselect" style="background-image:url('{{ asset('assets/images/cropper.jpg') }}')"><div class="layer"></div> </div>
+<div class="overlay-home noselect" style="background-size: 100%; background-image:url('@yield('background')')"><div class="layer"></div> </div>
 
 
 <!-- navigation -->
