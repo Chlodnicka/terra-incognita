@@ -80,6 +80,9 @@ Route::get('/expedition/{id}', 'Cms\ExpeditionController@edit')->name('expeditio
 Route::post('/expedition/{id}', 'Cms\ExpeditionController@update')->name('expeditions.update');
 Route::get('/expedition/{id}/', 'Cms\ExpeditionController@edit');
 
+Route::get('/daily_blog/add/{id}', 'Cms\DailyBlogController@add');
+Route::get('/daily_blog/edit/{id}/', 'Cms\DailyBlogController@edit');
+Route::get('/daily_blog/{id}/', 'Cms\DailyBlogController@index');
 
 Route::post('/backgrounds/{id}', 'Cms\BackgroundController@update')->name('background.update');
 

@@ -23,5 +23,10 @@ class Expedition extends Model
         return $this->hasMany('App\ExpeditionSection');
     }
 
+    public function dailyBlog()
+    {
+        return $this->hasMany('App\DailyBlog');
+    }
+
 
 }

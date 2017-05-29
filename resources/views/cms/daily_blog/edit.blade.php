@@ -25,8 +25,6 @@
                                 <li role="presentation" class=""><a href="/expedition/section/{{ $expedition_section->id }}">{{ $sections[$expedition_section->type] }}</a>
                                 </li>
                             @endforeach
-                            <li role="presentation"><a href="/daily_blog/{{ $expedition->id }}">Blog</a>
-                            </li>
                         </ul>
                         <div id="myTabContent" class="tab-content">
                             <div role="tabpanel" class="tab-pane fade active in" id="maindata"
