@@ -15,9 +15,11 @@
                         <div class="main-text">awesome life</div>
                         <div class="main-text">challenge your life</div>
                     </div>-->
-
-                <div class="btn-home animfadeInLeft" data-time="2100"><a class="link-class" href="/wyprawy/{{ $main_expedition->id }}">{{ $main_expedition->title }}</a>
-                </div>
+                @if(count($main_expedition) > 0)
+                    <div class="btn-home animfadeInLeft" data-time="2100"><a class="link-class"
+                                                                             href="/wyprawy/{{ $main_expedition->id }}">{{ $main_expedition->title }}</a>
+                    </div>
+                @endif
                 <div class="btn-home animfadeInLeft" data-time="2100"><a class="link-class" href="/o-nas">O NAS</a>
                 </div>
                 <div class="btn-home animfadeInRight" data-time="2400"><a class="link-class" href="/aktualnosci">AKTUALNOŚCI</a>
@@ -25,17 +27,6 @@
 
             </div>
             <!-- col end -->
-
-            <!-- Subscribe start -->
-            <div id="subwrap" class="white-popup-block mfp-hide animbouncefall" data-time="0">
-                <h5>Please fill your email below</h5>
-                <form id="subscribe" action="subscribe.php" method="post" name="subscribe">
-                    <input class="subscribfield subscribeemail" id="subscribeemail" name="subscribeemail" type="text">
-                    <button id="submit-2" class="btn-form" type="submit">Subscribe</button>
-                </form>
-                <div class="subscribesuccess">Thank you for fill your email</div>
-            </div>
-            <!-- Subscribe end -->
 
         </div><!-- row end -->
 
