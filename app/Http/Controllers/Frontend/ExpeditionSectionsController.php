@@ -15,7 +15,14 @@ class ExpeditionSectionsController extends BaseController
     public function show($id)
     {
         $expedition_section = ExpeditionSection::findOrFail($id);
-        return view('frontend.expeditions_sections.show', ['expedition_section' => $expedition_section]);
+        $names = array(
+            'equipment' => 'Sprzęt',
+            'organization' => 'Organizacja',
+            'gallery' => 'Galeria',
+            'description' => 'Opis i parametry',
+            'advices' => 'Porady',
+        );
+        return view('frontend.expeditions_sections.show', ['expedition_section' => $expedition_section, 'names' => $names]);
     }
 
 }

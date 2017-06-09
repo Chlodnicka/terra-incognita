@@ -30,13 +30,15 @@
     </div>
 
 </div>
-<div class="overlay-home noselect" style="background-size: 100%; background-image:url('@yield('background')')"><div class="layer"></div> </div>
+<div class="overlay-home noselect" style="background-size: 100%; background-image:url('@yield('background')')">
+    <div class="layer"></div>
+</div>
 
 
 <!-- navigation -->
 <!-- logo -->
 <div id="logo" class="brand-expedition noselect animfadeInLeft" data-time="0">
-    <a href="/"><img alt="background" style="max-width: 150px" src="{{ asset('assets/img/logo.png') }}"></a>
+    <a href="/"><img alt="background" style="max-width: 105px" src="{{ asset('assets/img/logo.png') }}"></a>
 </div>
 <!--header -->
 <header>
@@ -44,10 +46,15 @@
         <!-- mainmenu start -->
         <nav>
             <ul class="intro">
-                <li class="current-menu-item animfadeInRight intro" data-time="1000"><a href="/w-mediach" class="intro">W mediach</a></li>
-                <li class="current-menu-item animfadeInRight intro" data-time="1100"><a href="/partnerzy-i-sponsorzy" class="intro">Partnerzy</a></li>
-                <li class="current-menu-item animfadeInRight intro" data-time="1200"><a href="/galeria-video" class="intro">Galeria video</a></li>
-                <li class="animfadeInRight intro" data-time="1300"><a href="/wesprzyj-nas" class="intro">Wesprzyj nas</a></li>
+                <li class="current-menu-item animfadeInRight intro" data-time="1000"><a href="/w-mediach" class="intro">W
+                        mediach</a></li>
+                <li class="current-menu-item animfadeInRight intro" data-time="1100"><a href="/partnerzy-i-sponsorzy"
+                                                                                        class="intro">Partnerzy</a></li>
+                <li class="current-menu-item animfadeInRight intro" data-time="1200"><a href="/galeria-video"
+                                                                                        class="intro">Galeria video</a>
+                </li>
+                <li class="animfadeInRight intro" data-time="1300"><a href="/wesprzyj-nas" class="intro">Wesprzyj
+                        nas</a></li>
                 <li class="animfadeInRight intro" data-time="1400"><a href="/wyprawy" class="intro">Wyprawy</a></li>
                 <li class="animfadeInRight intro" data-time="1500"><a href="/kontakt" class="intro">Kontakt</a></li>
             </ul>
@@ -69,17 +76,21 @@
 <!-- content home end -->
 
 
-    <div class="soc-icon animfadeInLeft intro" data-time="1200">
-        <a href="https://www.facebook.com/TerraIncognitaProject/" target="_blank" class="intro"><i class="fa fa-facebook intro"></i></a>
-        <a href="https://www.instagram.com/terraincognitaprojekt/" target="_blank" class="intro"><i class="fa fa-instagram intro"></i></a>
-        <a href="https://www.youtube.com/channel/UCVxSyzSwI5hfDKmTguAUVjw" target="_blank" class="intro"><i class="fa fa-youtube-play intro"></i></a>
-    </div>
+<div class="soc-icon animfadeInLeft intro" data-time="1200">
+    <a href="https://www.facebook.com/TerraIncognitaProject/" target="_blank" class="intro"><i
+                class="fa fa-facebook intro"></i></a>
+    <a href="https://www.instagram.com/terraincognitaprojekt/" target="_blank" class="intro"><i
+                class="fa fa-instagram intro"></i></a>
+    <a href="https://www.youtube.com/channel/UCVxSyzSwI5hfDKmTguAUVjw" target="_blank" class="intro"><i
+                class="fa fa-youtube-play intro"></i></a>
+</div>
 
 
 <!-- Plugin JS -->
 <script src="{{ asset('assets/js/pluginsexpedition.js') }}" type="text/javascript"></script>
 <!-- expedition JS -->
 <script src="{{ asset('assets/js/expedition.js') }}" type="text/javascript"></script>
+<script src="{{ asset('assets/js/main.min.js') }}" type="text/javascript"></script>
 
 </body>
 </html>

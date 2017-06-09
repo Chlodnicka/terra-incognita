@@ -51,7 +51,7 @@ class DailyBlogController extends BaseController
             'description' => 'Opis i parametry',
             'advices' => 'Porady',
         );
-        return view('cms.daily_block.edit', ['daily_blog' => $dailyBlog, 'expedition' => $expedition, 'sections' => $sections]);
+        return view('cms.daily_blog.edit', ['daily_blog' => $dailyBlog, 'expedition' => $expedition, 'sections' => $sections]);
     }
 
     public function update($id)
@@ -67,6 +67,14 @@ class DailyBlogController extends BaseController
         }
 
         return redirect('/expedition/daily_blog/edit/' . $dailyBlog->id);
+    }
+
+    public function create($id)
+    {
+        $dailyBlog = new DailyBlog();
+        $dailyBlog->expedition_id = $id;
+        $dailyBlog->fill(request()->all())->save();
+        return redirect('/daily_blog/edit/' . $dailyBlog->id);
     }
 
 }

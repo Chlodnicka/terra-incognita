@@ -11,8 +11,11 @@
                 <h3 class="animbounceInLeft" data-time="600">{{ $expedition->title }}</h3>
                 <ul>
                     @foreach($expedition->sections as $section)
-                        <li><a href="/wyprawa/sekcja/{{ $section->id }}">{{ $section->type }}</a></li>
+                        <li><a href="/wyprawa/sekcja/{{ $section->id }}">{{ $names[$section->type] }}</a></li>
                     @endforeach
+                    @if(count($expedition->dailyBlog) > 0)
+                        <li><a href="/wyprawa/dziennik/{{ $expedition->id }}">Dziennik wyprawy</a></li>
+                    @endif
                 </ul>
             </div>
 

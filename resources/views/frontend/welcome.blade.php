@@ -2,6 +2,8 @@
 
 @section('title', 'Terra Incognita')
 
+@section('background', '/assets/img/bg.jpg')
+
 @section('content')
     <div class="contentexpedition">
 

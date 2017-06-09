@@ -57,8 +57,8 @@
                                                 <td>{{ $item->lead }}</td>
                                                 <td>{{ $item->ico }}</td>
                                                 <td>{{ $item->date }}</td>
-                                                <td><a href="daily_blog/edit/{{ $item->id }}">Edytuj</a> <a
-                                                            href="daily_blog/delete/{{ $item->id }}">Usuń</a></td>
+                                                <td><a href="/daily_blog/edit/{{ $item->id }}">Edytuj</a> <a
+                                                            href="/daily_blog/delete/{{ $item->id }}">Usuń</a></td>
                                             </tr>
                                         @endforeach
                                     @else
