@@ -65,8 +65,7 @@ class PartnersController extends BaseController
         $partner = Partner::findOrFail($id);
         $partner->delete();
 
-        $partners = Partner::all();
-        return view('partners.index', ['partners' => $partners]);
+        return redirect('/partners');
     }
 
 }
