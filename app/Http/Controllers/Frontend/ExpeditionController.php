@@ -21,7 +21,15 @@ class ExpeditionController extends BaseController
     public function show($id)
     {
         $expedition = Expedition::findOrFail($id);
-        return view('frontend.expeditions.show', ['expedition' => $expedition]);
+        $names = array(
+            'equipment' => 'Sprzęt',
+            'organization' => 'Organizacja',
+            'gallery' => 'Galeria',
+            'description' => 'Opis i parametry',
+            'advices' => 'Porady',
+        );
+
+        return view('frontend.expeditions.show', ['expedition' => $expedition, 'names' => $names]);
     }
 
     public function add()

@@ -39,6 +39,10 @@ Route::get('wyprawy/', 'Frontend\ExpeditionController@index');
 Route::get('wyprawa/sekcja/{id}', 'Frontend\ExpeditionSectionsController@show');
 Route::get('wyprawy/{id}', 'Frontend\ExpeditionController@show')->name('venture.show');
 Route::get('wyprawy/{id}/', 'Frontend\ExpeditionController@show');
+Route::get('wyprawa/dziennik/{id}', 'Frontend\DailyBlogController@index');
+Route::get('wyprawa/wpis/{id}', 'Frontend\DailyBlogController@show');
+Route::post('dziennik_wyprawy/dodaj_komentarz/{id}', 'Frontend\DailyBlogController@addComment')->name('blog.show');
+
 });
 
 Route::group(['domain' => 'cms.terraprojekt.com.pl'], function () {
@@ -80,7 +84,9 @@ Route::post('/expedition/{id}', 'Cms\ExpeditionController@update')->name('expedi
 Route::get('/expedition/{id}/', 'Cms\ExpeditionController@edit');
 
 Route::get('/daily_blog/add/{id}', 'Cms\DailyBlogController@add');
+Route::post('/daily_blog/create/{id}', 'Cms\DailyBlogController@create');
 Route::get('/daily_blog/edit/{id}/', 'Cms\DailyBlogController@edit');
+Route::post('/daily_blog/update/{id}/', 'Cms\DailyBlogController@update');
 Route::get('/daily_blog/{id}/', 'Cms\DailyBlogController@index');
 
 Route::post('/backgrounds/{id}', 'Cms\BackgroundController@update')->name('background.update');
@@ -101,5 +107,6 @@ Route::get('/media', 'Cms\ContentController@media')->name('media');
 Route::post('/media', 'Cms\ContentController@mediaUpdate')->name('media.update');
 
 Route::get('/', 'Cms\CmsController@index')->name('dashboard');
+
 
 });

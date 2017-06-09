@@ -84,7 +84,6 @@
                                     <li><a href="/contact">Kontakt</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/multimedia"><i class="fa fa-picture-o"></i> Multimedia</a></li>
                         </ul>
                     </div>
 
