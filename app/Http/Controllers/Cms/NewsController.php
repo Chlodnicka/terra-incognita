@@ -67,10 +67,11 @@ class NewsController extends BaseController
     public function destroy($id)
     {
         $news = News::findOrFail($id);
+        $news->comments()->delete();
         $news->delete();
 
         $news = News::all();
-        return view('cms.news.index', ['news' => $news]);
+        return redirect('/news');
     }
 
 }

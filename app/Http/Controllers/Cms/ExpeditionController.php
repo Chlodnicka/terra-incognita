@@ -78,7 +78,7 @@ class ExpeditionController extends BaseController
         $new_sections = $request->get('sections');
         $old_sections = $expedition->sections->pluck('type')->toArray();
 
-        $add_sections = array_diff($new_sections,$old_sections);
+        $add_sections = array_diff($new_sections, $old_sections);
         $remove_sections = array_diff($old_sections, $new_sections);
 
         if ($expedition->save()) {
@@ -100,10 +100,17 @@ class ExpeditionController extends BaseController
         return redirect('/expedition/' . $expedition->id);
     }
 
-    public function destroy($id)
+    public function delete($id)
     {
-        $ventures = Venture::all();
-        return view('ventures.index', ['ventures' => $ventures]);
+        $expedition = Expedition::findOrFail($id);
+        $expedition->sections()->delete();
+
+        foreach ($expedition->dailyBlog as $post) {
+            $post->comments()->delete();
+            $post->delete();
+        }
+        $expedition->delete();
+        return redirect('/expeditions');
     }
 
 }

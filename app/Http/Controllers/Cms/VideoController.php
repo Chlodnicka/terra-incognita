@@ -64,8 +64,7 @@ class VideoController extends BaseController
         $video = Video::findOrFail($id);
         $video->delete();
 
-        $videos = Video::all();
-        return view('videos.index', ['videos' => $videos]);
+        return redirect('/video');
     }
 
 }
