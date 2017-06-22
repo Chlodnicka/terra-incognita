@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Background;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -15,7 +16,8 @@ class ExpeditionController extends BaseController
     public function index()
     {
         $expeditions = Expedition::all();
-        return view('frontend.expeditions.index', ['expeditions' => $expeditions]);
+        $background = Background::findOrFail(3);
+        return view('frontend.expeditions.index', ['expeditions' => $expeditions, 'background' => $background]);
     }
 
     public function show($id)

@@ -19,14 +19,14 @@ class ContentController extends BaseController
 
     public function we()
     {
-        $content = Content::getByType('WE');
+        $content = Content::getByType('we');
         $background = Background::findOrFail(5);
         return view('cms.content.we', ['content' => $content, 'background' => $background]);
     }
 
     public function weUpdate(UpdateWe $request)
     {
-        $content = Content::getByType('ABOUT');
+        $content = Content::getByType('we');
         $content->fill($request->all());
         if ($content->save()) {
             $request->session()->flash('alert_success', 'Dane zostały zapisane');
@@ -38,14 +38,14 @@ class ContentController extends BaseController
 
     public function support()
     {
-        $content = Content::getByType('SUPPORT');
+        $content = Content::getByType('support');
         $background = Background::findOrFail(4);
         return view('cms.content.support', ['content' => $content, 'background' => $background]);
     }
 
     public function supportUpdate(UpdateSupport $request)
     {
-        $content = Content::getByType('SUPPORT');
+        $content = Content::getByType('support');
         $content->fill($request->all());
         if ($content->save()) {
             $request->session()->flash('alert_success', 'Dane zostały zapisane');
@@ -57,14 +57,14 @@ class ContentController extends BaseController
 
     public function contact()
     {
-        $content = Content::getByType('CONTACT');
+        $content = Content::getByType('contact');
         $background = Background::findOrFail(6);
         return view('cms.content.contact', ['content' => $content, 'background' => $background]);
     }
 
     public function contactUpdate(UpdateContact $request)
     {
-        $content = Content::getByType('CONTACT');
+        $content = Content::getByType('contact');
         $content->fill($request->all());
         if ($content->save()) {
             $request->session()->flash('alert_success', 'Dane zostały zapisane');
@@ -76,14 +76,14 @@ class ContentController extends BaseController
 
     public function media()
     {
-        $content = Content::getByType('MEDIA');
+        $content = Content::getByType('media');
         $background = Background::findOrFail(7);
         return view('cms.content.media', ['content' => $content, 'background' => $background]);
     }
 
     public function mediaUpdate(UpdateMedia $request)
     {
-        $content = Content::getByType('MEDIA');
+        $content = Content::getByType('media');
         $content->fill($request->all());
         if ($content->save()) {
             $request->session()->flash('alert_success', 'Dane zostały zapisane');
