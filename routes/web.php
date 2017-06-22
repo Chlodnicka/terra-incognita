@@ -25,7 +25,7 @@ Route::get('aktualnosci/{id}/', 'Frontend\NewsController@show');
 
 Route::get('/galeria-video', 'Frontend\VideoController@index');
 
-Route::get('my', 'Frontend\ContentController@we')->name('content.we');
+Route::get('/o-nas', 'Frontend\ContentController@we')->name('content.we');
 Route::get('w-mediach', 'Frontend\ContentController@media')->name('media.index');
 Route::get('partnerzy-i-sponsorzy', 'Frontend\PartnersController@index')->name('partners.index');
 Route::get('wesprzyj-nas', 'Frontend\ContentController@support')->name('content.support');

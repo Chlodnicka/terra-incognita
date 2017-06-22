@@ -2,6 +2,8 @@
 
 @section('title', 'Dziennik wyprawy')
 
+@section('background', $daily_blog->expedition->ico)
+
 @section('content')
     <!-- content -->
     <div class="main-content">
@@ -15,7 +17,9 @@
             </div>
 
             <div class="col-md-12 spaceup spacedown animfadeInUp" data-time="1200">
-                <img class="" alt="newsimage" src="{{  $daily_blog->ico }}">
+               @if(!empty($daily_blog->ico))
+		 <img class="" alt="newsimage" src="{{  $daily_blog->ico }}">
+		@endif
                 <div class="lead">{{  $daily_blog->lead }}</div>
                 <div class="text">{!!  $daily_blog->text !!}</div>
             </div>

@@ -2,7 +2,7 @@
 
 @section('title', 'Aktualności')
 
-@section('background', $expedition_section->ico)
+@section('background', $expedition_section->expedition->ico)
 
 @section('content')
     <div class="main-content">

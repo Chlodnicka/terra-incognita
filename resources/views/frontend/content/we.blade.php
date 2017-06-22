@@ -2,7 +2,7 @@
 
 @section('title', 'O nas')
 
-@section('background', $content->ico)
+@section('background', $content->string_1)
 
 @section('content')
 

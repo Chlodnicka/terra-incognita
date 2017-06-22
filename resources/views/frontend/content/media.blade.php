@@ -2,10 +2,9 @@
 
 @section('title', 'W mediach')
 
-@section('background', $content->ico)
+@section('background', $content->string_1)
 
 @section('content')
-
     <div class="main-content">
         <div class="row"><!-- row -->
 

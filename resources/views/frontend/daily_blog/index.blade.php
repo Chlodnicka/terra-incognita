@@ -1,6 +1,8 @@
 @extends('layouts.layout')
 
-@section('title', 'Wyprawy')
+@section('title', 'Blog z wyprawy')
+
+@section('background', $expedition->ico)
 
 @section('content')
 

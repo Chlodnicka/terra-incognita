@@ -19,14 +19,14 @@ class ContentController extends BaseController
 
     public function we()
     {
-        $content = Content::getByType('we');
+        $content = Content::getByType('ABOUT');
         $background = Background::findOrFail(5);
         return view('cms.content.we', ['content' => $content, 'background' => $background]);
     }
 
     public function weUpdate(UpdateWe $request)
     {
-        $content = Content::getByType('we');
+        $content = Content::getByType('ABOUT');
         $content->fill($request->all());
         if ($content->save()) {
             $request->session()->flash('alert_success', 'Dane zostały zapisane');
