@@ -32,6 +32,24 @@
                         </div>
 
                         <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Zdjęcie główne</label>
+                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                <div class="input-group">
+                           <span class="input-group-btn">
+                             <a id= "lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
+                               <i class="fa fa-picture-o"></i> Wybierz
+                             </a>
+                           </span>
+                                    <input id="thumbnail" class="form-control" type="text" name="string_1">
+                                </div>
+                                @if(!empty( $content->string_1))
+                                    <img id="holder" style="margin-top:15px;max-height:100px;"
+                                         src="{{ $content->string_1 }}">
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12">Dane osobowe</label>
                             <div class="col-md-9 col-sm-9 col-xs-12">
                                 <input type="text" class="form-control" name="string_2" id="string_2"

@@ -2,7 +2,7 @@
 
 @section('title', 'Skontaktuj się z nami')
 
-@section('background', $content->ico)
+@section('background', $content->string_1)
 
 @section('content')
 

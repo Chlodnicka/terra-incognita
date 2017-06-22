@@ -24,7 +24,7 @@
                         <h3>{{ $expedition->title }}</h3>
                         <div class="devider-page-content"></div>
                         @if(!empty($expedition->ico))
-                            <img class="" alt="discoverimage" src="{{ $expedition->ico }}">
+                            <img class="" alt="discoverimage" src="{{ $expedition->ico }}" style="max-width: 300px;">
                         @endif
                         <p>{{ $expedition->lead }}</p>
 

@@ -19,17 +19,20 @@
             </div>
             <div class="btn-content spaceup spacedown animfadeInUp" data-time="1200" role="button"><a
                         class=" link-class" href="/wyprawy/{{$expedition->id}}">WRÓĆ</a></div>
-            <br />
-            <br />
-            <br />
-            <br />
+            <br/>
+            <br/>
+            <br/>
+            <br/>
             @foreach($expedition->dailyBlog as $post)
                 <div class="col-md-12 color-gray spacedown animfadeInUp" data-time="1300">
                     <h3>{{ $post->title }}</h3>
                     <div class="devider-page-content"></div>
-                    <img class="" alt="discoverimage" src="{{ $post->ico }}">
+                    @if(!empty($post->ico))
+                        <img class="" alt="discoverimage" src="{{ $post->ico }}">
+                    @endif
                     <p>{{ $post->lead }}</p>
-                    <div class="btn-content"><a class="link-class" href="/wyprawa/wpis/{{ $post->id }}">ZOBACZ WIĘCEJ</a></div>
+                    <div class="btn-content"><a class="link-class" href="/wyprawa/wpis/{{ $post->id }}">ZOBACZ
+                            WIĘCEJ</a></div>
                 </div>
             @endforeach
 

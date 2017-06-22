@@ -16,7 +16,8 @@
                         <li><a href="/wyprawa/sekcja/{{ $section->id }}">{{ $names[$section->type] }}</a></li>
                     @endforeach
                     @if(count($expedition_section->expedition->dailyBlog) > 0)
-                        <li><a href="/wyprawa/dziennik/{{ $expedition_section->expedition->id }}">Dziennik wyprawy</a></li>
+                        <li><a href="/wyprawa/dziennik/{{ $expedition_section->expedition->id }}">Dziennik wyprawy</a>
+                        </li>
                     @endif
                 </ul>
             </div>

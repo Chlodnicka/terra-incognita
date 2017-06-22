@@ -10,6 +10,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\Http\Requests\CreateExpedition;
 use App\Expedition;
 use App\ExpeditionSection;
+use App\Background;
 
 class ExpeditionController extends BaseController
 {
@@ -18,7 +19,8 @@ class ExpeditionController extends BaseController
     public function index()
     {
         $expeditions = Expedition::all();
-        return view('cms.expeditions.index', ['expeditions' => $expeditions]);
+        $background = Background::findOrFail(1);
+        return view('cms.expeditions.index', ['expeditions' => $expeditions, 'background' => $background]);
     }
 
     public function show($id)
