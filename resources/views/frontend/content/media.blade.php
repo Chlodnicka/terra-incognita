@@ -1,6 +1,8 @@
 @extends('layouts.layout')
 
-@section('title', 'O nas')
+@section('title', 'W mediach')
+
+@section('background', $content->ico)
 
 @section('content')
 
@@ -17,7 +19,6 @@
             <div class="col-md-12 spacedown animfadeInUp" data-time="1800">
                 {!! $content->text !!}
             </div>
-
 
 
             <!-- About end -->

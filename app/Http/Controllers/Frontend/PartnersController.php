@@ -18,7 +18,7 @@ class PartnersController extends Controller
 
     public function __construct()
     {
-        $this->background = Background::findOrFail(1);
+        $this->background = Background::findOrFail(2);
     }
 
     public function index()

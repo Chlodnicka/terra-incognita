@@ -2,6 +2,8 @@
 
 @section('title', 'Aktualności')
 
+@section('background', $expedition_section->ico)
+
 @section('content')
     <div class="main-content">
         <div class="row"><!-- row -->
@@ -20,7 +22,6 @@
             </div>
 
             <div class="col-md-12 spaceup spacedown animfadeInUp" data-time="1200">
-                <img class="" alt="newsimage" src="{{ $expedition_section->ico }}">
                 <div class="lead">{{ $expedition_section->lead }}</div>
                 <div class="text">{!! $expedition_section->text !!}</div>
             </div>

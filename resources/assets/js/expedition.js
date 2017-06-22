@@ -448,6 +448,7 @@ $(window).on("load", function(){
         }
 
     });
+
 });
 
 // plugin end 

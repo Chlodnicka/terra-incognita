@@ -2,6 +2,8 @@
 
 @section('title', 'Wyprawy')
 
+@section('background', $background->ico)
+
 @section('content')
 
 
@@ -17,16 +19,23 @@
             </div>
 
             @foreach($expeditions as $expedition)
-                <div class="col-md-12 color-gray spacedown animfadeInUp" data-time="1300">
-                    <h3>{{ $expedition->title }}</h3>
-                    <div class="devider-page-content"></div>
-                    <img class="" alt="discoverimage" src="{{ $expedition->ico }}">
-                    <p>{{ $expedition->lead }}</p>
-                    <div class="btn-content"><a class="link-class" href="/wyprawy/{{ $expedition->id }}">ZOBACZ WIĘCEJ</a></div>
-                </div>
-            @endforeach
+                <div class="col-md-12 expedition spacedown animfadeInUp " time="1300">
+                    <div class="expedition-list-item">
+                        <h3>{{ $expedition->title }}</h3>
+                        <div class="devider-page-content"></div>
+                        @if(!empty($expedition->ico))
+                            <img class="" alt="discoverimage" src="{{ $expedition->ico }}">
+                        @endif
+                        <p>{{ $expedition->lead }}</p>
 
-            <!-- Discover end -->
+                        <div class="btn-content"><a class="link-class" href="/wyprawy/{{ $expedition->id }}">ZOBACZ
+                                WIĘCEJ</a></div>
+                    </div>
+
+                </div>
+        @endforeach
+
+        <!-- Discover end -->
         </div><!-- row end -->
     </div>
 @endsection

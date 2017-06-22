@@ -21,7 +21,7 @@
                     <h2 class="intro">{{ $item->title }}</h2>
 
                     <iframe width="100%" height="700"
-                            src="https://www.youtube.com/embed/VsJkxWvQJIM">
+                            src="{{ str_replace("watch?v=","embed/",$item->link_to_video) }}">
                     </iframe>
 
                 @endforeach

@@ -1,6 +1,8 @@
 @extends('layouts.layout')
 
-@section('title', 'Aktualności')
+@section('title', $expedition->title)
+
+@section('background', $expedition->ico)
 
 @section('content')
     <div class="main-content">
@@ -20,7 +22,6 @@
             </div>
 
             <div class="col-md-12 spaceup spacedown animfadeInUp" data-time="1200">
-                <img class="" alt="newsimage" src="{{ $expedition->ico }}">
                 <div class="lead">{{ $expedition->lead }}</div>
                 <div class="text">{!! $expedition->text !!}</div>
             </div>

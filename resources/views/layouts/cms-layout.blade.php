@@ -324,6 +324,7 @@
 <!-- Custom Theme Scripts -->
 <script src="{!! asset('/vendor/laravel-filemanager/js/lfm.js') !!}"></script>
 <script src="{!! asset('assets/build/js/custom.min.js') !!}"></script>
+<script src="{!! asset('assets/js/jquery.datetimepicker.min.js') !!}"></script>
 <script>
     var domain = "";
     $('#lfm').filemanager('image', {prefix: domain});
