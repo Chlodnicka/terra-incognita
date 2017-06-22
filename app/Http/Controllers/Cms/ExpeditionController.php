@@ -19,7 +19,7 @@ class ExpeditionController extends BaseController
     public function index()
     {
         $expeditions = Expedition::all();
-        $background = Background::findOrFail(1);
+        $background = Background::findOrFail(3);
         return view('cms.expeditions.index', ['expeditions' => $expeditions, 'background' => $background]);
     }
 

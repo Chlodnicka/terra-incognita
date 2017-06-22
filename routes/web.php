@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-//Route::group(['domain' => 'terraprojekt.com.pl'], function () {
+Route::group(['domain' => 'terraprojekt.com.pl'], function () {
 
 Route::get('/', 'Frontend\HomeController@index')->name('home');
 
@@ -43,12 +43,12 @@ Route::get('wyprawa/dziennik/{id}', 'Frontend\DailyBlogController@index');
 Route::get('wyprawa/wpis/{id}', 'Frontend\DailyBlogController@show');
 Route::post('dziennik_wyprawy/dodaj_komentarz/{id}', 'Frontend\DailyBlogController@addComment')->name('blog.show');
 
-//});
+});
 
-//Route::group(['domain' => 'cms.terraprojekt.com.pl'], function () {
+Route::group(['domain' => 'cms.terraprojekt.com.pl'], function () {
 Auth::routes();
 
-//Route::get('/cms', 'CmsController@index')->name('dashboard');
+Route::get('/cms', 'CmsController@index')->name('dashboard');
 
 Route::get('/news', 'Cms\NewsController@index')->name('news');
 Route::get('/news/add', 'Cms\NewsController@add')->name('news.add');
@@ -110,4 +110,4 @@ Route::post('/media', 'Cms\ContentController@mediaUpdate')->name('media.update')
 Route::get('/', 'Cms\CmsController@index')->name('dashboard');
 
 
-//});
+});

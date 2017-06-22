@@ -5,8 +5,6 @@
 @section('background', $background->ico)
 
 @section('content')
-
-
     <!-- content -->
     <div class="main-content">
         <div class="row"><!-- row -->

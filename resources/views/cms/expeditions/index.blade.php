@@ -20,7 +20,7 @@
                     <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Zdjęcie w tle</label>
                         <input type="hidden" value="{{ $background->ico }}"/>
-                        <input type="hidden" name="type" value="news"/>
+                        <input type="hidden" name="type" value="expeditions"/>
                         <div class="col-md-9 col-sm-9 col-xs-12">
                             <div class="input-group">
                                                <span class="input-group-btn">
