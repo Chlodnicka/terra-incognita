@@ -2,7 +2,7 @@
 
 @section('title', 'O nas')
 
-@section('background', $background->ico)
+@section('background', $content->ico)
 
 @section('content')
 
@@ -19,12 +19,12 @@
             <!-- service -->
             <div class="col-md-6 spaceup spacedown animfadeInUp" data-time="900">
                 <h4>Grzesiek</h4>
-                <img src="{{ $content->string_2 }}" />
+                <img src="{{ $content->string_2 }}"/>
                 <div>{!! $content->long_string_1 !!} </div>
             </div>
             <div class="col-md-6 spaceup spacedown animfadeInUp" data-time="1200">
                 <h4>Maciek</h4>
-                <img src="{{ $content->string_1 }}" />
+                <img src="{{ $content->string_1 }}"/>
                 <div>{!! $content->text !!}</div>
             </div>
 

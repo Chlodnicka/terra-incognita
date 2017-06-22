@@ -2,7 +2,7 @@
 
 @section('title', 'Wesprzyj nas')
 
-@section('background', $background->ico)
+@section('background', $content->ico)
 
 @section('content')
     <div class="main-content">

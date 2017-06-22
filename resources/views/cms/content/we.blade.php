@@ -15,30 +15,6 @@
                     <div class="clearfix"></div>
                 </div>
                 <div class="x_content">
-                    <form method="post" action="backgrounds/5">
-                        {{ csrf_field() }}
-                        <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Zdjęcie w tle</label>
-                            <input type="hidden" value="{{ $background->ico }}"/>
-                            <input type="hidden" name="type" value="we"/>
-                            <div class="col-md-9 col-sm-9 col-xs-12">
-                                <div class="input-group">
-                                               <span class="input-group-btn">
-                                                 <a id="lfm" data-input="thumbnail" data-preview="holder"
-                                                    class="btn btn-primary">
-                                                   <i class="fa fa-picture-o"></i> Wybierz
-                                                 </a>
-                                               </span>
-                                    <input id="thumbnail" class="form-control" type="text" name="ico">
-                                </div>
-                                <img id="holder" style="margin-top:15px;max-height:100px;"
-                                     src="{{ $background->ico }}">
-                            </div>
-                        </div>
-                        <div class="">
-                            <button type="submit">Zapisz</button>
-                        </div>
-                    </form>
                     <br/>
                     <form class="form-horizontal form-label-left" method="post" action="/about-us"
                           enctype="multipart/form-data">
@@ -56,14 +32,16 @@
                         <div class="form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12">Maciek - opis</label>
                             <div class="col-md-9 col-sm-9 col-xs-12">
-                                <textarea cols="50" id="text" name="text" placeholder="" rows="4">{!! $content->text !!}</textarea>
+                                <textarea cols="50" id="text" name="text" placeholder=""
+                                          rows="4">{!! $content->text !!}</textarea>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12">Grzesiek - opis</label>
                             <div class="col-md-9 col-sm-9 col-xs-12">
-                                <textarea cols="50" id="long_string_1" name="long_string_1" placeholder="" rows="4">{!! $content->long_string_1 !!}</textarea>
+                                <textarea cols="50" id="long_string_1" name="long_string_1" placeholder=""
+                                          rows="4">{!! $content->long_string_1 !!}</textarea>
                             </div>
                         </div>
 

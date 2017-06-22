@@ -19,7 +19,7 @@ class ContentController extends BaseController
 
     public function we()
     {
-        $content = Content::getByType('ABOUT');
+        $content = Content::getByType('WE');
         $background = Background::findOrFail(5);
         return view('cms.content.we', ['content' => $content, 'background' => $background]);
     }
@@ -77,7 +77,8 @@ class ContentController extends BaseController
     public function media()
     {
         $content = Content::getByType('MEDIA');
-        return view('cms.content.media', ['content' => $content]);
+        $background = Background::findOrFail(7);
+        return view('cms.content.media', ['content' => $content, 'background' => $background]);
     }
 
     public function mediaUpdate(UpdateMedia $request)
