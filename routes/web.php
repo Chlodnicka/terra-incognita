@@ -82,6 +82,7 @@ Route::post('/expedition/add', 'Cms\ExpeditionController@create')->name('expedit
 Route::get('/expedition/{id}', 'Cms\ExpeditionController@edit')->name('expeditions.edit');
 Route::post('/expedition/{id}', 'Cms\ExpeditionController@update')->name('expeditions.update');
 Route::get('/expedition/{id}/', 'Cms\ExpeditionController@edit');
+Route::get('/expedition/delete/{id}', 'Cms\ExpeditionController@delete');
 
 Route::get('/daily_blog/add/{id}', 'Cms\DailyBlogController@add');
 Route::post('/daily_blog/create/{id}', 'Cms\DailyBlogController@create');
