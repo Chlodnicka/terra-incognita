@@ -10,7 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::group(['domain' => 'terraprojekt.com.pl'], function () {
+
+Route::pattern('domain', '(www.terraprojekt.com.pl|terraprojekt.com.pl)');
+
+Route::group(['domain' => '{domain}'], function () {
 
 Route::get('/', 'Frontend\HomeController@index')->name('home');
 

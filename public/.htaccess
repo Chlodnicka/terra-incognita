@@ -13,7 +13,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.php [L]
 
-AuthName "Podaj haslo"
-AuthType Basic
-AuthUserFile /home/maciekstrom/ftp/terra-incognita/public/.htpasswd
-Require valid-user
+#AuthName "Podaj haslo"
+#AuthType Basic
+#AuthUserFile /home/maciekstrom/ftp/terra-incognita/public/.htpasswd
+#Require valid-user

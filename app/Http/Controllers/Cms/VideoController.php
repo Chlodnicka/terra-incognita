@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\Http\Requests\UpdateVideosItem as Update;
 use App\Http\Requests\CreateVideosItem as Create;
 use App\Video;
+use App\Background;
 
 class VideoController extends BaseController
 {
@@ -17,7 +18,8 @@ class VideoController extends BaseController
     public function index()
     {
         $videos = Video::all();
-        return view('cms.videos.index', ['videos' => $videos]);
+	$background = Background::findOrFail(4);
+        return view('cms.videos.index', ['videos' => $videos, 'background' => $background]);
     }
 
 
