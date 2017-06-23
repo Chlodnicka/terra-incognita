@@ -13,7 +13,7 @@
 
 Route::pattern('domain', '(www.terraprojekt.com.pl|terraprojekt.com.pl)');
 
-Route::group(['domain' => '{domain}'], function () {
+Route::group(['domain' => 'terraprojekt.com.pl'], function () {
 
 Route::get('/', 'Frontend\HomeController@index')->name('home');
 
@@ -23,7 +23,7 @@ Route::get('aktualnosci/index/', 'Frontend\NewsController@index');
 Route::get('aktualnosci', 'Frontend\NewsController@index')->name('news.index');
 Route::get('aktualnosci/', 'Frontend\NewsController@index');
 Route::post('aktualnosci/dodaj_komentarz/{id}', 'Frontend\NewsController@addComment')->name('news.show');
-Route::get('aktualnosci/{id}', 'Frontend\NewsController@show')->name('news.show');
+Route::get('/aktualnosci/{id}', 'Frontend\NewsController@show')->name('news.show');
 Route::get('aktualnosci/{id}/', 'Frontend\NewsController@show');
 
 Route::get('/galeria-video', 'Frontend\VideoController@index');
