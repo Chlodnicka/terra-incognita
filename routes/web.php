@@ -87,8 +87,10 @@ Route::get('/expedition/delete/{id}', 'Cms\ExpeditionController@delete');
 Route::get('/daily_blog/add/{id}', 'Cms\DailyBlogController@add');
 Route::post('/daily_blog/create/{id}', 'Cms\DailyBlogController@create');
 Route::get('/daily_blog/edit/{id}/', 'Cms\DailyBlogController@edit');
-Route::post('/daily_blog/update/{id}/', 'Cms\DailyBlogController@update');
+Route::post('/daily_blog/edit/{id}/', 'Cms\DailyBlogController@update');
+Route::get('/daily_blog/delete/{id}/', 'Cms\DailyBlogController@delete');
 Route::get('/daily_blog/{id}/', 'Cms\DailyBlogController@index');
+
 
 Route::post('/backgrounds/{id}', 'Cms\BackgroundController@update')->name('background.update');
 
