@@ -17,7 +17,7 @@ class VideoController extends BaseController
     public function index()
     {
         $videos = Video::all();
-        $background = Background::findOrFail(5);
+        $background = Background::findOrFail(4);
         return view('frontend.video.index', ['videos' => $videos, 'background' => $background]);
     }
 

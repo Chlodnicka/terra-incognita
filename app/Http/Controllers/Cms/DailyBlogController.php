@@ -66,15 +66,28 @@ class DailyBlogController extends BaseController
             request()->session()->flash('alert_success', 'Błąd zapisu danych. Spróbuj jeszcze raz.');
         }
 
-        return redirect('/expedition/daily_blog/edit/' . $dailyBlog->id);
+        return redirect('/daily_blog/edit/' . $dailyBlog->id);
     }
 
     public function create($id)
     {
         $dailyBlog = new DailyBlog();
         $dailyBlog->expedition_id = $id;
-        $dailyBlog->fill(request()->all())->save();
+        if ($dailyBlog->fill(request()->all())->save()) {
+            request()->session()->flash('alert_success', 'Dane zostały zapisane');
+        } else {
+            request()->session()->flash('alert_success', 'Błąd zapisu danych. Spróbuj jeszcze raz.');
+        }
         return redirect('/daily_blog/edit/' . $dailyBlog->id);
+    }
+
+    public function delete($id)
+    {
+        $dailyBlog = DailyBlog::findOrFail($id);
+        $expeditionId = $dailyBlog->expedition->id;
+        $dailyBlog->comments()->delete();
+        $dailyBlog->delete();
+        return redirect('/daily_blog/' . $expeditionId);
     }
 
 }
