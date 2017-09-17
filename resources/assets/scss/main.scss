@@ -33,5 +33,10 @@ body {
 .expedition-list-item {
   padding: 40px;
   background: rgba(0,0,0,0.5); /* Old browsers */
+}
 
+.overlay-home {
+  @media (max-width: 1000px) {
+    background-size: auto 100% !important;
+  }
 }

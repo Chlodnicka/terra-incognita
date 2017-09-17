@@ -13,45 +13,9 @@
 
 
 
-Route::group(['domain' => 'www.terraprojekt.com.pl'], function () {
-
-Route::get('/', 'Frontend\HomeController@index')->name('home');
-
-
-Route::get('aktualnosci/index', 'Frontend\NewsController@index');
-Route::get('aktualnosci/index/', 'Frontend\NewsController@index');
-Route::get('aktualnosci', 'Frontend\NewsController@index')->name('news.index');
-Route::get('aktualnosci/', 'Frontend\NewsController@index');
-Route::post('aktualnosci/dodaj_komentarz/{id}', 'Frontend\NewsController@addComment')->name('news.show');
-Route::get('aktualnosci/{id}', 'Frontend\NewsController@show')->name('news.show');
-Route::get('aktualnosci/{id}/', 'Frontend\NewsController@show');
-
-Route::get('/galeria-video', 'Frontend\VideoController@index');
-
-Route::get('/o-nas', 'Frontend\ContentController@we')->name('content.we');
-Route::get('w-mediach', 'Frontend\ContentController@media')->name('media.index');
-Route::get('partnerzy-i-sponsorzy', 'Frontend\PartnersController@index')->name('partners.index');
-Route::get('wesprzyj-nas', 'Frontend\ContentController@support')->name('content.support');
-Route::get('kontakt', 'Frontend\ContentController@contact')->name('content.contact');
-Route::post('/wyslij-mail', 'Frontend\ContentController@contactSend');
-
-Route::get('wyprawy/index', 'Frontend\ExpeditionController@index');
-Route::get('wyprawy/index/', 'Frontend\ExpeditionController@index');
-Route::get('nasze-wyprawy', 'Frontend\ExpeditionController@index')->name('venture.index');
-Route::get('wyprawy/', 'Frontend\ExpeditionController@index');
-Route::get('wyprawa/sekcja/{id}', 'Frontend\ExpeditionSectionsController@show');
-Route::get('wyprawy/{id}', 'Frontend\ExpeditionController@show')->name('venture.show');
-Route::get('wyprawy/{id}/', 'Frontend\ExpeditionController@show');
-Route::get('wyprawa/dziennik/{id}', 'Frontend\DailyBlogController@index');
-Route::get('wyprawa/wpis/{id}', 'Frontend\DailyBlogController@show');
-Route::post('dziennik_wyprawy/dodaj_komentarz/{id}', 'Frontend\DailyBlogController@addComment')->name('blog.show');
-
-});
-
-
-Route::group(['domain' => 'terraprojekt.com.pl'], function () {
-
-Route::get('/', 'Frontend\HomeController@index')->name('home');
+//Route::group(['domain' => 'www.terraprojekt.com.pl'], function () {
+//
+//Route::get('/', 'Frontend\HomeController@index')->name('home');
 
 
 Route::get('aktualnosci/index', 'Frontend\NewsController@index');
@@ -82,12 +46,48 @@ Route::get('wyprawa/dziennik/{id}', 'Frontend\DailyBlogController@index');
 Route::get('wyprawa/wpis/{id}', 'Frontend\DailyBlogController@show');
 Route::post('dziennik_wyprawy/dodaj_komentarz/{id}', 'Frontend\DailyBlogController@addComment')->name('blog.show');
 
-});
+//});
 
-Route::group(['domain' => 'cms.terraprojekt.com.pl'], function () {
+
+//Route::group(['domain' => 'terraprojekt.com.pl'], function () {
+//
+//Route::get('/', 'Frontend\HomeController@index')->name('home');
+
+
+Route::get('aktualnosci/index', 'Frontend\NewsController@index');
+Route::get('aktualnosci/index/', 'Frontend\NewsController@index');
+Route::get('aktualnosci', 'Frontend\NewsController@index')->name('news.index');
+Route::get('aktualnosci/', 'Frontend\NewsController@index');
+Route::post('aktualnosci/dodaj_komentarz/{id}', 'Frontend\NewsController@addComment')->name('news.show');
+Route::get('aktualnosci/{id}', 'Frontend\NewsController@show')->name('news.show');
+Route::get('aktualnosci/{id}/', 'Frontend\NewsController@show');
+
+Route::get('/galeria-video', 'Frontend\VideoController@index');
+
+Route::get('/o-nas', 'Frontend\ContentController@we')->name('content.we');
+Route::get('w-mediach', 'Frontend\ContentController@media')->name('media.index');
+Route::get('partnerzy-i-sponsorzy', 'Frontend\PartnersController@index')->name('partners.index');
+Route::get('wesprzyj-nas', 'Frontend\ContentController@support')->name('content.support');
+Route::get('kontakt', 'Frontend\ContentController@contact')->name('content.contact');
+Route::post('/wyslij-mail', 'Frontend\ContentController@contactSend');
+
+Route::get('wyprawy/index', 'Frontend\ExpeditionController@index');
+Route::get('wyprawy/index/', 'Frontend\ExpeditionController@index');
+Route::get('nasze-wyprawy', 'Frontend\ExpeditionController@index')->name('venture.index');
+Route::get('wyprawy/', 'Frontend\ExpeditionController@index');
+Route::get('wyprawa/sekcja/{id}', 'Frontend\ExpeditionSectionsController@show');
+Route::get('wyprawy/{id}', 'Frontend\ExpeditionController@show')->name('venture.show');
+Route::get('wyprawy/{id}/', 'Frontend\ExpeditionController@show');
+Route::get('wyprawa/dziennik/{id}', 'Frontend\DailyBlogController@index');
+Route::get('wyprawa/wpis/{id}', 'Frontend\DailyBlogController@show');
+Route::post('dziennik_wyprawy/dodaj_komentarz/{id}', 'Frontend\DailyBlogController@addComment')->name('blog.show');
+
+//});
+//
+//Route::group(['domain' => 'cms.terraprojekt.com.pl'], function () {
 Auth::routes();
 
-Route::get('/cms', 'CmsController@index')->name('dashboard');
+Route::get('/cms', 'Cms\CmsController@index')->name('dashboard');
 
 Route::get('/news', 'Cms\NewsController@index')->name('news');
 Route::get('/news/add', 'Cms\NewsController@add')->name('news.add');
@@ -151,4 +151,4 @@ Route::post('/media', 'Cms\ContentController@mediaUpdate')->name('media.update')
 Route::get('/', 'Cms\CmsController@index')->name('dashboard');
 
 
-});
+//});
