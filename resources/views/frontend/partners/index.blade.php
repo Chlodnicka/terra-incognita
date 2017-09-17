@@ -26,7 +26,7 @@
 
             <div id="owl-brand" class="owl-carousel">
                 @foreach($partners as $partner)
-                    <div class="item"><a href="{{ $partner->link_to_service }}"><img style="max-width: 100%;" alt="{{ $partner->name }}" src="{{ $partner->ico }}"></a></div>
+                    <div class="item"><a href="{{ $partner->link_to_site }}" target="_blank"><img style="max-width: 100%;" alt="{{ $partner->name }}" src="{{ $partner->ico }}"></a></div>
                 @endforeach
             </div>
             <!-- client brands end-->

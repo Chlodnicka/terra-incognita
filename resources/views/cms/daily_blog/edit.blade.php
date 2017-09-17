@@ -16,7 +16,7 @@
                 </div>
                 <div class="x_content">
                     <br/>
-                    <form class="form-horizontal form-label-left" method="post" action="/daily_blog/edit/{{$expedition->id}}"
+                    <form class="form-horizontal form-label-left" method="post" action="/daily_blog/edit/{{$daily_blog->id}}"
                           enctype="multipart/form-data">
                         {{ csrf_field() }}
                         @foreach ($errors->all() as $error)

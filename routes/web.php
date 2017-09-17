@@ -16,7 +16,6 @@ Route::group(['domain' => 'www.terraprojekt.com.pl'], function () {
 
 Route::get('/', 'Frontend\HomeController@index')->name('home');
 
-
 Route::get('aktualnosci/index', 'Frontend\NewsController@index');
 Route::get('aktualnosci/index/', 'Frontend\NewsController@index');
 Route::get('aktualnosci', 'Frontend\NewsController@index')->name('news.index');
@@ -44,7 +43,6 @@ Route::get('wyprawy/{id}/', 'Frontend\ExpeditionController@show');
 Route::get('wyprawa/dziennik/{id}', 'Frontend\DailyBlogController@index');
 Route::get('wyprawa/wpis/{id}', 'Frontend\DailyBlogController@show');
 Route::post('dziennik_wyprawy/dodaj_komentarz/{id}', 'Frontend\DailyBlogController@addComment')->name('blog.show');
-
 });
 
 
@@ -86,7 +84,7 @@ Route::post('dziennik_wyprawy/dodaj_komentarz/{id}', 'Frontend\DailyBlogControll
 Route::group(['domain' => 'cms.terraprojekt.com.pl'], function () {
 Auth::routes();
 
-Route::get('/cms', 'CmsController@index')->name('dashboard');
+Route::get('/cms', 'Cms\CmsController@index')->name('dashboard');
 
 Route::get('/news', 'Cms\NewsController@index')->name('news');
 Route::get('/news/add', 'Cms\NewsController@add')->name('news.add');
