@@ -8,6 +8,18 @@
     <meta content="" name="keywords">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
     <link href="{{ asset('assets/css/main.min.css') }}" media="all" rel="stylesheet" type="text/css">
+    <style>
+        @media (max-width: 950px) {
+            .overlay-home.noselect.intro {
+                background-size: auto 100% !important;
+            }
+        }
+        @media (min-width: 951px) {
+            .overlay-home.noselect.intro {
+                background-size: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
 
