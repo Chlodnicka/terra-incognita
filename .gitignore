@@ -2,6 +2,7 @@
 /public/storage
 /public/hot
 /public/photos
+/public/_grunt/npm_modules
 /storage/*.key
 /vendor
 /.idea
