@@ -21,6 +21,6 @@ class HomeController extends BaseController
     public function index()
     {
         $mainExpedition = Expedition::where('is_main_expedition', 1)->first();
-        return view('frontend.welcome', ['main_expedition' => $mainExpedition]);
+        return view('frontend.welcome', ['main_expedition_id' => $mainExpedition->id, 'main_expedition_name' => $mainExpedition->title]);
     }
 }

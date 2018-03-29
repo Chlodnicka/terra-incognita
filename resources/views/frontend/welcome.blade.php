@@ -2,7 +2,7 @@
 
 @section('title', 'Terra Incognita')
 
-@section('background', '/assets/img/bg.jpg')
+@section('background', '/assets/img/bg-min.jpg')
 
 @section('content')
     <div class="contentexpedition">
@@ -17,9 +17,9 @@
                         <div class="main-text">awesome life</div>
                         <div class="main-text">challenge your life</div>
                     </div>-->
-                @if(count($main_expedition) > 0)
+                @if($main_expedition_id)
                     <div class="btn-home animfadeInLeft" data-time="2100"><a class="link-class"
-                                                                             href="/wyprawy/{{ $main_expedition->id }}">{{ $main_expedition->title }}</a>
+                                                                             href="/wyprawy/{{ $main_expedition_id }}">{{ $main_expedition_name }}</a>
                     </div>
                 @endif
                 <div class="btn-home animfadeInLeft" data-time="2100"><a class="link-class" href="/o-nas">O NAS</a>
