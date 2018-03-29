@@ -12,7 +12,7 @@
 */
 
 
-Route::group(['domain' => 'www.terraprojekt.com.pl'], function () {
+Route::group(['domain' => 'terraincognita.local'], function () {
 
 Route::get('/', 'Frontend\HomeController@index')->name('home');
 
@@ -46,7 +46,7 @@ Route::post('dziennik_wyprawy/dodaj_komentarz/{id}', 'Frontend\DailyBlogControll
 });
 
 
-Route::group(['domain' => 'terraprojekt.com.pl'], function () {
+Route::group(['domain' => 'terraincognita.local'], function () {
 
 Route::get('/', 'Frontend\HomeController@index')->name('home');
 
@@ -81,7 +81,7 @@ Route::post('dziennik_wyprawy/dodaj_komentarz/{id}', 'Frontend\DailyBlogControll
 
 });
 
-Route::group(['domain' => 'cms.terraprojekt.com.pl'], function () {
+Route::group(['domain' => 'cms.terraincognita.local'], function () {
 Auth::routes();
 
 Route::get('/cms', 'Cms\CmsController@index')->name('dashboard');
