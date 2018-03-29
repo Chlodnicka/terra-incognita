@@ -6,3 +6,5 @@
 /.idea
 /nbproject/private/
 /storage
+/routes
+.env
