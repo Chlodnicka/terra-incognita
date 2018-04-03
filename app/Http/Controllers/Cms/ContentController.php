@@ -27,7 +27,12 @@ class ContentController extends BaseController
     public function weUpdate(UpdateWe $request)
     {
         $content = Content::getByType('ABOUT');
-        $content->fill($request->all());
+        $data = $request->all();
+        if (!$data['string_1']) {
+            unset($data['string_1']);
+        }
+
+        $content->fill($data);
         if ($content->save()) {
             $request->session()->flash('alert_success', 'Dane zostały zapisane');
         } else {
@@ -46,7 +51,12 @@ class ContentController extends BaseController
     public function supportUpdate(UpdateSupport $request)
     {
         $content = Content::getByType('support');
-        $content->fill($request->all());
+        $data = $request->all();
+        if (!$data['string_1']) {
+            unset($data['string_1']);
+        }
+
+        $content->fill($data);
         if ($content->save()) {
             $request->session()->flash('alert_success', 'Dane zostały zapisane');
         } else {
@@ -65,7 +75,12 @@ class ContentController extends BaseController
     public function contactUpdate(UpdateContact $request)
     {
         $content = Content::getByType('contact');
-        $content->fill($request->all());
+        $data = $request->all();
+        if (!$data['string_1']) {
+            unset($data['string_1']);
+        }
+
+        $content->fill($data);
         if ($content->save()) {
             $request->session()->flash('alert_success', 'Dane zostały zapisane');
         } else {
@@ -84,7 +99,12 @@ class ContentController extends BaseController
     public function mediaUpdate(UpdateMedia $request)
     {
         $content = Content::getByType('media');
-        $content->fill($request->all());
+        $data = $request->all();
+        if (!$data['string_1']) {
+            unset($data['string_1']);
+        }
+
+        $content->fill($data);
         if ($content->save()) {
             $request->session()->flash('alert_success', 'Dane zostały zapisane');
         } else {

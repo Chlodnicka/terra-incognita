@@ -39,7 +39,7 @@
                         <input type="hidden" name="news_id" value="{{ $daily_blog->id }}">
                         <input type="text" name="nick" placeholder="Twój nick"/>
                         <textarea name="contents" placeholder="Twój komentarz"></textarea>
-                        <div class="btn-content spaceup spacedown animfadeInUp" data-time="1200" role="button">Wyślij</div>
+                        <button type="submit" class="btn-content spaceup spacedown animfadeInUp" data-time="1200" role="button">Wyślij</button>
                     </form>
                     <br/>
                     <br/>
