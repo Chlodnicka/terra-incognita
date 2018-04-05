@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use EmailLabs\Actions\Sendmail;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -50,17 +51,29 @@ class ContentController extends BaseController
         $mail = new Mail;
         $mail->fill(request()->all());
         if ($mail->save()) {
-            $data = array(
-                'name' => $mail->name,
-                'email' => $mail->email,
-                'content' => $mail->content
-            );
-            //kontakt@terraprojekt.com.pl
 
-            Mailing::send('emails.message', $data, function ($message) use ($data) {
-                $message->from($data['email'], 'Terra Incognita');
-                $message->to('maja.chlodnicka@gmail.com')->subject('TerraIncognita - mail ze strony');
-            });
+            $sendMail = new Sendmail();
+            $sendMail->setAppKey(env('MAIL_APP_KEY'));
+            $sendMail->setAppSecret(env('MAIL_APP_SECRET'));
+
+
+            $adresses = array(
+                'kontakt@terraprojekt.com.pl' => array(
+                    'message_id' => $mail->id
+                )
+            );
+
+            //Set required data
+            $sendMail->setData('from', $mail->email);
+            $sendMail->setData('from_name', 'Terra Incognita, wiadomość od: ' . $mail->name);
+            $sendMail->setData('to', $adresses);
+            $sendMail->setData('subject', 'Wiadomość z formularza kontaktowego');
+            $sendMail->setData('smtp_account', '1.terraincognita.smtp');
+            $sendMail->setData('text', $mail->content);
+            $sendMail->setData('replay_to', $mail->email);
+
+            $sendMail->getResult();
+
             return redirect('/kontakt?send=1');
         } else {
             return redirect('/kontakt?send=-1');
