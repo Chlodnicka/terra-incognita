@@ -50,7 +50,7 @@
 <!-- navigation -->
 <!-- logo -->
 <div id="logo" class="brand-expedition noselect animfadeInLeft" data-time="0">
-    <a href="/"><img alt="background" style="max-width: 105px" src="{{ asset('assets/img/logo.png') }}"></a>
+    <a href="/"><img alt="background" style="max-width: 105px" src="{{ asset('assets/img/TIP-logo.png') }}"></a>
 </div>
 <!--header -->
 <header>
