@@ -8,3 +8,5 @@
 /storage
 /routes
 .env
+/public/photos
+
