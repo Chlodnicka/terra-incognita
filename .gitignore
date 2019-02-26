@@ -5,6 +5,5 @@
 /vendor
 /.idea
 /nbproject/private/
-/storage
 .env
-/public/photos
+
